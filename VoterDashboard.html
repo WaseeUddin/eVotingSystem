@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voter Dashboard</title>
+  <link rel="stylesheet" href="VoterDashboard.css">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">▣</div>
+      <span>E-Voting System</span>
+    </div>
+
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Elections</a>
+      <a href="#">Donations</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn-top">♡ John Doe <span class="role">(Voter)</span></button>
+      <button class="btn-top">↪ Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Voter Dashboard</h1>
+    <p class="subtitle">Welcome back, John Doe! Exercise your democratic rights.</p>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-icon blue">▣</span>
+        <p class="stat-title">Active Elections</p>
+        <p class="stat-number">1</p>
+        <p class="stat-text">Elections you can vote in</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon green">✓</span>
+        <p class="stat-title">Votes Cast</p>
+        <p class="stat-number">0</p>
+        <p class="stat-text">Total votes submitted</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon purple">↗</span>
+        <p class="stat-title">Candidates</p>
+        <p class="stat-number">3</p>
+        <p class="stat-text">Running in active elections</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="panel">
+        <h2>Active Elections</h2>
+        <p class="panel-subtitle">Elections currently open for voting</p>
+
+        <div class="election-card">
+          <span class="badge">Open</span>
+          <h3>2026 General Election</h3>
+          <p class="small">National general election for congressional representatives</p>
+          <p class="ends">Ends: 11/1/2026, 8:00:00 PM</p>
+          <button class="vote-btn">Vote Now</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Support Candidates</h2>
+        <p class="panel-subtitle">Donate to candidates you believe in</p>
+
+        <div class="candidate-card">
+          <span class="money">$</span>
+          <h3>Sarah Johnson</h3>
+          <p class="small">Progressive Party</p>
+          <p class="raised">Raised: $45,000</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+
+        <div class="candidate-card">
+          <span class="money">$</span>
+          <h3>Michael Chen</h3>
+          <p class="small">Liberty Alliance</p>
+          <p class="raised">Raised: $38,000</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+
+        <div class="candidate-card">
+          <span class="money">$</span>
+          <h3>Emily Rodriguez</h3>
+          <p class="small">Unity Coalition</p>
+          <p class="raised">Raised: $52,000</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

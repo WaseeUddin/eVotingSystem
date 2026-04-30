@@ -1,0 +1,150 @@
+﻿    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fbf8ff;
+      color: #17004d;
+    }
+
+    header {
+      height: 50px;
+      background: #fff;
+      border-bottom: 1px solid #e4d3ff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px 0 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #9b00ff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #9700ff;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
+
+    nav {
+      display: flex;
+      gap: 42px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #22005c;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .user-btn,
+    .logout-btn {
+      height: 34px;
+      border: 1px solid #d9b8ff;
+      background: #fbf7ff;
+      color: #8000ff;
+      border-radius: 9px;
+      padding: 0 13px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .role {
+      color: #7b2cff;
+      font-size: 11px;
+    }
+
+    main {
+      padding: 28px 26px;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #2f2364;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #d9b8ff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      background: #eadbff;
+      color: #7b2cff;
+      border-radius: 12px;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .description {
+      color: #56409a;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .dates {
+      display: flex;
+      gap: 22px;
+      font-size: 11px;
+      color: #1f174b;
+      margin-bottom: 20px;
+    }
+
+    .alert {
+      border: 1px solid #dfe1e8;
+      background: #fcfcff;
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 11px;
+      color: #1f174b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      color: #4d348f;
+      font-size: 13px;
+    }
