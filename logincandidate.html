@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to E-Voting</title>
+    <link rel="stylesheet" href="lohincandidate.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Back to Home Link -->
+        <a href="index.html" class="back-link">
+            <span class="back-icon">←</span>
+            <span class="back-text">Back to Home</span>
+        </a>
+
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="20" fill="#9810FA"/>
+                        <path d="M24 12C20.5 12 18 14.5 18 18C18 21.5 20.5 24 24 24C27.5 24 30 21.5 30 18C30 14.5 27.5 12 24 12Z" fill="white"/>
+                        <path d="M24 26C18 26 14 30 14 34V36H34V34C34 30 30 26 24 26Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="heading">Login to E-Voting</h1>
+            <p class="subtitle">Access your account to participate in elections</p>
+        </div>
+
+        <!-- Tab List -->
+        <div class="tab-list">
+            <a href="loginvoter.html" class="tab-button">
+                <span class="tab-icon">👤</span>
+                <span class="tab-text">Voter</span>
+            </a>
+            <a href="logincandidate.html" class="tab-button active">
+                <span class="tab-icon">👥</span>
+                <span class="tab-text">Candidate</span>
+            </a>
+            <a href="loginadmin.html" class="tab-button">
+                <span class="tab-icon">⚙️</span>
+                <span class="tab-text">Admin</span>
+            </a>
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Candidate Login</h2>
+                <p class="card-description">Access your campaign dashboard</p>
+            </div>
+            <div class="card-content">
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="candidate@example.com" value="candidate@example.com">
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="••••••••" value="••••••••">
+                </div>
+
+                <!-- Login Button -->
+                <button class="login-button">Login as Candidate</button>
+
+                <!-- Register Link -->
+                <p class="register-link">Don't have an account? <a href="#">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

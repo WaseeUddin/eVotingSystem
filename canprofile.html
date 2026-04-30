@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - E-Voting</title>
+    <link rel="stylesheet" href="canprofile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-wrapper">
+            <!-- Left: Logo & Brand -->
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#9810FA"/>
+                            <path d="M20 10C17.5 10 15 12.5 15 15C15 17.5 17.5 20 20 20C22.5 20 25 17.5 25 15C25 12.5 22.5 10 20 10Z" fill="white"/>
+                            <path d="M20 22C15 22 11 25 11 28V30H29V28C29 25 25 22 20 22Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <span class="brand-text">E-Voting System</span>
+                </a>
+
+                <!-- Navigation -->
+                <nav class="nav-menu">
+                    <a href="canhome.html" class="nav-button">Dashboard</a>
+                    <a href="canprofile.html" class="nav-button active">Profile</a>
+                    <a href="#" class="nav-button">Campaign</a>
+                </nav>
+            </div>
+
+            <!-- Right: User Info & Logout -->
+            <div class="header-right">
+                <div class="user-info">
+                    <svg class="user-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="7" r="4" stroke="#9810FA" stroke-width="1.5"/>
+                        <path d="M4 18C4 15 6 13 10 13C14 13 16 15 16 18" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span class="user-name">Sarah Johnson</span>
+                    <span class="user-role">(candidate)</span>
+                </div>
+                <button class="logout-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 14H3C2.44772 14 2 13.5523 2 13V3C2 2.44772 2.44772 2 3 2H6" stroke="#8200DB" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M11 11L14 8L11 5" stroke="#8200DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 8H6" stroke="#8200DB" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Edit Profile</h1>
+            <p>Update your campaign information and 7 key agendas.</p>
+        </div>
+
+        <!-- Basic Information Card -->
+        <div class="form-card">
+            <div class="card-header">
+                <h2 class="card-title">Basic Information</h2>
+                <p class="card-description">Your name and party affiliation</p>
+            </div>
+            <div class="card-content">
+                <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-input" value="Sarah Johnson" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Party Affiliation *</label>
+                    <input type="text" class="form-input" value="Progressive Party" placeholder="Enter your party name">
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Statement Card -->
+        <div class="form-card">
+            <div class="card-header">
+                <h2 class="card-title">Campaign Statement</h2>
+                <p class="card-description">Your vision and message to voters</p>
+            </div>
+            <div class="card-content">
+                <div class="form-group">
+                    <label class="form-label">Campaign Statement *</label>
+                    <textarea class="form-textarea" placeholder="Write your campaign statement here...">Building a sustainable future for all citizens with focus on education and healthcare.</textarea>
+                    <span class="char-count">86 characters</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Agendas Card -->
+        <div class="form-card agendas-card">
+            <div class="card-header">
+                <h2 class="card-title">Key Agendas (7/7)</h2>
+                <p class="card-description">Your policy priorities and plans</p>
+            </div>
+            <div class="card-content">
+                <!-- Agenda 1 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 1</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Education Reform" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Increase funding for public schools by 25%</textarea>
+                    </div>
+                </div>
+
+                <!-- Agenda 2 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 2</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Healthcare Access" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Expand universal healthcare coverage</textarea>
+                    </div>
+                </div>
+
+                <!-- Agenda 3 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 3</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Climate Action" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Achieve carbon neutrality by 2040</textarea>
+                    </div>
+                </div>
+
+                <!-- Agenda 4 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 4</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Economic Growth" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Support small businesses with tax incentives</textarea>
+                    </div>
+                </div>
+
+                <!-- Agenda 5 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 5</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Infrastructure" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Modernize transportation networks</textarea>
+                    </div>
+                </div>
+
+                <!-- Agenda 6 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 6</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Technology" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Bridge the digital divide</textarea>
+                    </div>
+                </div>
+
+                <!-- Agenda 7 -->
+                <div class="agenda-section">
+                    <div class="agenda-header">
+                        <h3 class="agenda-title">Agenda 7</h3>
+                        <button class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 4V3C5 2.44772 5.44772 2 6 2H10C10.5523 2 11 2.44772 11 3V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 4V13C3 13.5523 3.44772 14 4 14H12C12.5523 14 13 13.5523 13 13V4" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Title *</label>
+                        <input type="text" class="form-input" value="Public Safety" placeholder="Enter agenda title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-textarea" placeholder="Describe your position and plans">Community-based policing initiatives</textarea>
+                    </div>
+                </div>
+
+                <!-- Add Agenda Button -->
+                <button class="add-agenda-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 3V13M3 8H13" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Add New Agenda
+                </button>
+            </div>
+        </div>
+
+        <!-- Save Button -->
+        <div class="save-section">
+            <button class="save-btn">Save Changes</button>
+        </div>
+    </main>
+</body>
+</html>
