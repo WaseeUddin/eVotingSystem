@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Results</title>
+
+<link rel="stylesheet" href="Live_Result_Counting.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-square-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav>
+    <a href="AdminDashBoard.html">Dashboard</a>
+    <a href="ManageElections.html">Elections</a>
+    <a href="Live_Result_Counting.html">Results</a>
+    <a href="Anomaly_Detection_andRepoting.html">Anomalies</a>
+  </nav>
+
+  <div class="actions">
+    <button class="top-btn">
+      <i class="fa-solid fa-shield-halved"></i>
+      Admin User <small>(Admin)</small>
+    </button>
+
+    <a href="index.html" class="top-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+  <h1>Live Results & Counting</h1>
+  <p class="subtitle">Real-time election results and vote tracking.</p>
+
+  <p class="label">Select Election</p>
+  <div class="select-box">
+    <span>2026 General Election - active</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <section class="stats">
+    <div class="stat">
+      <span class="stat-icon blue">
+        <i class="fa-solid fa-square-poll-vertical"></i>
+      </span>
+      <p class="stat-title">Total Votes Cast</p>
+      <p class="stat-number">0</p>
+      <p class="stat-text">Votes recorded</p>
+    </div>
+
+    <div class="stat">
+      <span class="stat-icon orange">
+        <i class="fa-solid fa-trophy"></i>
+      </span>
+      <p class="stat-title">Leading Candidate</p>
+      <p class="stat-number" style="font-size:16px;">Sarah Johnson</p>
+      <p class="stat-text">0.0% of votes</p>
+    </div>
+
+    <div class="stat">
+      <span class="stat-icon green">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </span>
+      <p class="stat-title">Election Status</p>
+      <span class="status">ACTIVE</span>
+      <p class="stat-text">11/1/2026</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Vote Distribution</h2>
+    <p class="panel-sub">Live counting results for 2026 General Election</p>
+    <div class="chart-icon">
+      <i class="fa-solid fa-chart-column"></i>
+    </div>
+
+    <div class="candidate-row">
+      <div class="candidate-top">
+        <div class="rank r1">1</div>
+        <div>
+          <div class="name">Sarah Johnson</div>
+          <div class="party">Progressive Party</div>
+        </div>
+        <div class="vote-count">0<div class="percent">0.0%</div></div>
+      </div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="candidate-row">
+      <div class="candidate-top">
+        <div class="rank r2">2</div>
+        <div>
+          <div class="name">Michael Chen</div>
+          <div class="party">Liberty Alliance</div>
+        </div>
+        <div class="vote-count">0<div class="percent">0.0%</div></div>
+      </div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="candidate-row">
+      <div class="candidate-top">
+        <div class="rank r3">3</div>
+        <div>
+          <div class="name">Emily Rodriguez</div>
+          <div class="party">Unity Coalition</div>
+        </div>
+        <div class="vote-count">0<div class="percent">0.0%</div></div>
+      </div>
+      <div class="bar"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Election Timeline</h2>
+    <p class="panel-sub">Voting window and deadlines</p>
+
+    <div class="timeline-item">
+      <div>
+        <p class="timeline-title">Voting Start</p>
+        <p class="timeline-date">11/1/2026, 8:00:00 AM</p>
+      </div>
+      <span class="timeline-badge started">Started</span>
+    </div>
+
+    <div class="timeline-item">
+      <div>
+        <p class="timeline-title">Voting End</p>
+        <p class="timeline-date">11/1/2026, 8:00:00 PM</p>
+      </div>
+      <span class="timeline-badge open">Open</span>
+    </div>
+
+    <div class="timeline-item">
+      <div>
+        <p class="timeline-title">Result Certification</p>
+        <p class="timeline-date">After voting deadline</p>
+      </div>
+      <span class="timeline-badge pending">Pending</span>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

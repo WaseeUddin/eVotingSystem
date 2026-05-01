@@ -57,15 +57,22 @@
       gap: 12px;
     }
 
-    .top-btn {
-      height: 34px;
-      border: 1px solid #d8b8ff;
-      background: #fbf7ff;
-      color: #7d00ff;
-      border-radius: 9px;
-      padding: 0 14px;
-      font-size: 12px;
-    }
+.top-btn {
+  display: inline-flex;        /* 🔥 MUST */
+  align-items: center;         /* vertical center */
+  gap: 6px;                    /* icon gap */
+
+  height: 34px;
+  border: 1px solid #d8b8ff;
+  background: #fbf7ff;
+  color: #7d00ff;
+
+  border-radius: 9px;
+  padding: 0 14px;
+  font-size: 12px;
+
+  text-decoration: none;       /* 🔥 for <a> */
+}
 
     .role {
       font-size: 11px;

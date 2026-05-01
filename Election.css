@@ -20,25 +20,28 @@
       padding: 0 22px 0 28px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #9b00ff;
-      font-weight: 600;
-      font-size: 16px;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #8100ff;
+}
 
-    .logo {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #9700ff;
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 16px;
-    }
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #9700ff;
+  display: flex;              /* 🔥 change from grid */
+  align-items: center;
+  justify-content: center;
+}
+
+.logo i {
+  color: #fff;                /* 🔥 must */
+  font-size: 14px;            /* 🔥 control size */
+}
 
     nav {
       display: flex;

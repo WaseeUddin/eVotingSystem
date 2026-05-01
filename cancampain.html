@@ -1,189 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaign & Donations - E-Voting</title>
-    <link rel="stylesheet" href="cancampain.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Campaign & Donations</title>
+<link rel="stylesheet" href="cancampain.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-wrapper">
-            <!-- Left: Logo & Brand -->
-            <div class="header-left">
-                <a href="index.html" class="logo-link">
-                    <div class="logo-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20" cy="20" r="20" fill="#9810FA"/>
-                            <path d="M20 10C17.5 10 15 12.5 15 15C15 17.5 17.5 20 20 20C22.5 20 25 17.5 25 15C25 12.5 22.5 10 20 10Z" fill="white"/>
-                            <path d="M20 22C15 22 11 25 11 28V30H29V28C29 25 25 22 20 22Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <span class="brand-text">E-Voting System</span>
-                </a>
 
-                <!-- Navigation -->
-                <nav class="nav-menu">
-                    <a href="canhome.html" class="nav-button">Dashboard</a>
-                    <a href="canprofile.html" class="nav-button">Profile</a>
-                    <a href="cancampain.html" class="nav-button active">Campaign</a>
-                </nav>
-            </div>
+<header>
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
 
-            <!-- Right: User Info & Logout -->
-            <div class="header-right">
-                <div class="user-info">
-                    <svg class="user-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="7" r="4" stroke="#9810FA" stroke-width="1.5"/>
-                        <path d="M4 18C4 15 6 13 10 13C14 13 16 15 16 18" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <span class="user-name">Sarah Johnson</span>
-                    <span class="user-role">(candidate)</span>
-                </div>
-                <button class="logout-btn">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 14H3C2.44772 14 2 13.5523 2 13V3C2 2.44772 2.44772 2 3 2H6" stroke="#8200DB" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M11 11L14 8L11 5" stroke="#8200DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 8H6" stroke="#8200DB" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <span>Logout</span>
-                </button>
-            </div>
-        </div>
-    </header>
+  <nav>
+    <a href="canhome.html">Dashboard</a>
+    <a href="canprofile.html">Profile</a>
+    <a href="cancampain.html">Campaign</a>
+  </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Page Title -->
-        <div class="page-title">
-            <h1>Campaign & Donations</h1>
-            <p>Track your fundraising progress and donor activity.</p>
-        </div>
+  <div class="header-actions">
+    <button><i class="fa-solid fa-user"></i> Sarah Johnson <span class="role">(Candidate)</span></button>
+    <a href="index.html" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+    </a>
+  </div>
+</header>
 
-        <!-- Stats Cards -->
-        <div class="stats-grid">
-            <!-- Total Raised -->
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-title">Total Raised</span>
-                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 1C8 1 13 1 13 6C13 11 8 13 8 13C8 13 3 11 3 6C3 1 8 1 8 1Z" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8 3V8L10 10" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="stat-value">$45,000</div>
-                <div class="stat-description">of $100,000 goal</div>
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-            </div>
+<main>
+  <h1>Campaign & Donations</h1>
+  <p class="subtitle">Track your fundraising progress and donor activity.</p>
 
-            <!-- Total Donors -->
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-title">Total Donors</span>
-                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="5" r="2" stroke="#9810FA" stroke-width="1.5"/>
-                        <circle cx="11" cy="5" r="2" stroke="#9810FA" stroke-width="1.5"/>
-                        <path d="M2 14C2 11.5 4 10 6 10C6.5 10 7 10.1 7.5 10.2" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M9 10C9.5 10 10 10.1 10.5 10.2C12 10 14 11.5 14 14" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="stat-value">0</div>
-                <div class="stat-description">Individual supporters</div>
-            </div>
+  <section class="stats">
+    <div class="stat-card">
+      <span class="stat-icon green"><i class="fa-solid fa-dollar-sign"></i></span>
+      <p class="stat-title">Total Raised</p>
+      <p class="stat-number">$45,000</p>
+      <p class="stat-text">of $100,000 goal</p>
+      <div class="small-bar">
+        <div class="small-fill"></div>
+      </div>
+    </div>
 
-            <!-- Avg Donation -->
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-title">Avg. Donation</span>
-                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="3" width="12" height="10" rx="2" stroke="#9810FA" stroke-width="1.5"/>
-                        <path d="M5 7H11" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M5 10H8" stroke="#9810FA" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="stat-value">$0.00</div>
-                <div class="stat-description">Per donor contribution</div>
-            </div>
+    <div class="stat-card">
+      <span class="stat-icon blue"><i class="fa-solid fa-user-friends"></i></span>
+      <p class="stat-title">Total Donors</p>
+      <p class="stat-number">0</p>
+      <p class="stat-text">Individual supporters</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon purple"><i class="fa-solid fa-arrow-up-right"></i></span>
+      <p class="stat-title">Avg. Donation</p>
+      <p class="stat-number">$0.00</p>
+      <p class="stat-text">Per donor contribution</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="panel">
+      <h2>Fundraising Progress</h2>
+      <p class="panel-sub">Your campaign funding goal</p>
+
+      <div class="progress-box">
+        <div class="progress-top">
+          <span>Current Progress</span>
+          <span>45.0%</span>
         </div>
 
-        <!-- Fundraising Progress & Recent Donors -->
-        <div class="content-grid">
-            <!-- Fundraising Progress Card -->
-            <div class="progress-card">
-                <div class="card-header">
-                    <h2 class="card-title">Fundraising Progress</h2>
-                    <p class="card-description">Your campaign funding goal</p>
-                </div>
-                <div class="card-content">
-                    <!-- Current Progress -->
-                    <div class="progress-section">
-                        <div class="progress-header">
-                            <span class="progress-label">Current Progress</span>
-                            <span class="progress-percentage">45.0%</span>
-                        </div>
-                        <div class="progress-bar-large">
-                            <div class="progress-fill-large"></div>
-                        </div>
-                        <div class="progress-values">
-                            <span class="progress-raised">$45,000</span>
-                            <span class="progress-goal">$100,000</span>
-                        </div>
-                    </div>
-
-                    <!-- Stats Row -->
-                    <div class="stats-row">
-                        <div class="month-stat">
-                            <span class="stat-label">This Month</span>
-                            <span class="stat-amount green">$0</span>
-                        </div>
-                        <div class="remaining-stat">
-                            <span class="stat-label">Remaining</span>
-                            <span class="stat-amount blue">$55,000</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recent Donors Card -->
-            <div class="donors-card">
-                <div class="card-header">
-                    <h2 class="card-title">Recent Donors</h2>
-                    <p class="card-description">Your latest supporters</p>
-                </div>
-                <div class="card-content">
-                    <div class="empty-state">
-                        <svg class="empty-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="18" r="8" stroke="#9810FA" stroke-width="2"/>
-                            <path d="M12 42C12 34 18 30 24 30C30 30 36 34 36 42" stroke="#9810FA" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <p class="empty-text">No donors yet</p>
-                        <span class="empty-subtext">Share your campaign to attract donors</span>
-                    </div>
-                </div>
-            </div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
         </div>
 
-        <!-- Donation Transactions Card -->
-        <div class="transactions-card">
-            <div class="card-header">
-                <h2 class="card-title">Donation Transactions</h2>
-                <p class="card-description">History of all donations received</p>
-            </div>
-            <div class="card-content">
-                <div class="empty-state">
-                    <svg class="empty-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="8" y="12" width="32" height="24" rx="4" stroke="#9810FA" stroke-width="2"/>
-                        <path d="M16 22H32M16 28H24" stroke="#9810FA" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <p class="empty-text">No transactions yet</p>
-                    <span class="empty-subtext">Donation history will appear here</span>
-                </div>
-            </div>
+        <div class="progress-bottom">
+          <span>$45,000</span>
+          <span>$100,000</span>
         </div>
-    </main>
+      </div>
+
+      <div class="mini-stats">
+        <div class="mini-card green-bg">
+          <p class="mini-label">This Month</p>
+          <p class="mini-value green">$0</p>
+        </div>
+
+        <div class="mini-card blue-bg">
+          <p class="mini-label">Remaining</p>
+          <p class="mini-value blue">$55,000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Recent Donations</h2>
+      <p class="panel-sub">Latest contributions from supporters</p>
+
+      <div class="empty">
+        <div class="empty-icon"><i class="fa-solid fa-hand-holding-usd"></i></div>
+        <p class="empty-text">No donations received yet</p>
+      </div>
+    </div>
+  </section>
+</main>
+
 </body>
 </html>

@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fbf8ff;
+  color: #16004d;
+}
+
+/* HEADER */
+header {
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #e4d3ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a000ff;
+  font-weight: 600;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #9700ff;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+  color: #16004d;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.top-btn {
+  border: 1px solid #d8b8ff;
+  background: #fbf7ff;
+  color: #6f00e8;
+  border-radius: 10px;
+  padding: 7px 14px;
+  font-size: 12px;
+}
+
+.role {
+  font-size: 11px;
+  color: #7b2cff;
+}
+
+/* MAIN */
+main {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #30245f;
+  margin-bottom: 28px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dec3ff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.stat-title {
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.stat-text {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.icon {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 14px;
+}
+
+/* COLORS */
+.blue { color: #3478ff; }
+.green { color: #00a63e; }
+.purple { color: #9d00ff; }
+.red { color: #ff2d3d; }
+
+/* CONTENT GRID */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #dec3ff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.panel h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.panel-sub {
+  font-size: 13px;
+  color: #5b3da0;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #7f32f4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 11px;
+}
+
+.btn-outline {
+  background: #fbf7ff;
+  border: 1px solid #d8b8ff;
+  color: #16004d;
+}
+
+/* ELECTION CARD */
+.election {
+  border: 1px solid #dddfea;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+}
+
+.election h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.small {
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.live {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #d8ffe7;
+  color: #00a63e;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+}
+
+.empty .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}

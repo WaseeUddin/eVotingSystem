@@ -11,9 +11,14 @@
     <header>
     <div class="logo"><i class="fa-solid fa-square-check"></i> E-Voting System</div>
     <nav>
-      <button class="login">Login</button>
-      <button class="register">Register</button>
-    </nav>
+  <button class="login">
+    <a href="loginvoter.html">Login</a>
+  </button>
+
+  <button class="register">
+    <a href="RegisVoter.html">Register</a>
+  </button>
+</nav>
   </header>
 
   <!--<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
@@ -37,8 +42,8 @@
       </p>
 
       <div class="hero-actions">
-        <button class="primary-btn">Register to Vote</button>
-        <button class="outline-btn">Already Registered? Login</button>
+        <button class="primary-btn"><i class="fa-solid fa-square-check"></i><a href="RegisVoter.html">Register to Vote</a></button>
+        <button class="outline-btn"><a href="loginvoter.html">Already Registered? Login</a></button>
       </div>
     </section>
 
@@ -61,7 +66,7 @@
 
     <section>
       <div class="live-banner">
-        <h2>Live Elections</h2>
+        <h2><i class="fa-solid fa-wave-square"></i> Live Elections</h2>
         <p>3 elections are currently active. Register now to participate!</p>
       </div>
 
@@ -69,41 +74,46 @@
         <div class="election-card">
           <span class="badge">Active</span>
           <h3>Presidential Election 2024</h3>
+          <p><i class="fa-solid fa-location-dot"></i> National</p>
           <p><i class="fa-regular fa-calendar"></i> Mar 15 - Mar 30, 2024</p>
           <div class="numbers">
             <div>5<br><small>Candidates</small></div>
             <div>35,420<br><small>Votes Cast</small></div>
           </div>
-          <div class="progress"><div></div></div>
-          <button class="vote-btn">Register to Vote</button>
+          <div class="progress"><div style="width:50%"></div></div>
+          <div>
+            <button class="vote-btn"><i class="fa-solid fa-square-check"></i> <a href="RegisVoter.html">Participate Now</a></button>
+          </div>
         </div>
 
         <div class="election-card">
           <span class="badge">Active</span>
           <h3>City Mayor Election</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Dhaka</p>
           <p><i class="fa-regular fa-calendar"></i> Mar 12 - Mar 27, 2024</p>
           <div class="numbers">
             <div>8<br><small>Candidates</small></div>
             <div>12,890<br><small>Votes Cast</small></div>
           </div>
-          <div class="progress"><div style="width:55%"></div></div>
-          <button class="vote-btn">Register to Vote</button>
+          <div class="progress"><div style="width:80%"></div></div>
+          <button class="vote-btn"><i class="fa-solid fa-square-check"></i> <a href="RegisVoter.html">Participate Now</a></button>
         </div>
 
         <div class="election-card">
           <span class="badge">Active</span>
           <h3>State Governor Election</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Chattogram</p>
           <p><i class="fa-regular fa-calendar"></i> Mar 14 - Mar 29, 2024</p>
           <div class="numbers">
             <div>6<br><small>Candidates</small></div>
             <div>24,567<br><small>Votes Cast</small></div>
           </div>
-          <div class="progress"><div style="width:65%"></div></div>
-          <button class="vote-btn">Register to Vote</button>
+          <div class="progress"><div style="width:60%"></div></div>
+          <button class="vote-btn"><i class="fa-solid fa-square-check"></i> <a href="RegisVoter.html">Participate Now</a></button>
         </div>
       </div>
 
-      <button class="view-all">View All Elections</button>
+      <button class="view-all"><a href="loginvoter.html">View All Elections</a></button>
     </section>
 
     <section>
@@ -194,10 +204,17 @@
     </section>
 
     <section class="cta">
-      <h2>Ready to Make Your Voice Heard?</h2>
-      <p>Join our platform today and participate in secure, transparent democratic elections.</p>
-      <button>Register Now</button>
-    </section>
+  <h2>Ready to Make Your Voice Heard?</h2>
+  <p>
+    Join our platform today and participate in secure, transparent democratic
+    elections
+  </p>
+
+  <a href="RegisVoter.html" class="register-btn">
+    <i class="fa-solid fa-square-check"></i>
+    Register Now
+  </a>
+</section>
   </main>
 
   <footer>

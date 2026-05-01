@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Voter Dashboard</title>
   <link rel="stylesheet" href="VoterDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
   <header>
-    <div class="brand">
-      <div class="logo">▣</div>
-      <span>E-Voting System</span>
-    </div>
+<div class="brand">
+  <div class="logo">
+    <i class="fa-solid fa-check"></i>
+  </div>
+  <span>E-Voting System</span>
+</div>
 
     <nav>
-      <a href="#">Dashboard</a>
-      <a href="#">Elections</a>
-      <a href="#">Donations</a>
+      <a href="VoterDashboard.html">Dashboard</a>
+      <a href="Election.html">Elections</a>
+      <a href="Donate_to_Candi.html">Donations</a>
     </nav>
 
     <div class="actions">
-      <button class="btn-top">♡ John Doe <span class="role">(Voter)</span></button>
-      <button class="btn-top">↪ Logout</button>
-    </div>
+      <button class="btn-top"><i class="fa-solid fa-heart"></i> John Doe <span class="role">(Voter)</span></button>
+      <a href="index.html" class="btn-top">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
   </header>
 
   <main>
@@ -32,21 +35,21 @@
 
     <section class="stats">
       <div class="stat-card">
-        <span class="stat-icon blue">▣</span>
+        <span class="stat-icon blue"><i class="fa-solid fa-check-to-slot"></i></span>
         <p class="stat-title">Active Elections</p>
         <p class="stat-number">1</p>
         <p class="stat-text">Elections you can vote in</p>
       </div>
 
       <div class="stat-card">
-        <span class="stat-icon green">✓</span>
+        <span class="stat-icon green"><i class="fa-solid fa-check"></i></span>
         <p class="stat-title">Votes Cast</p>
         <p class="stat-number">0</p>
         <p class="stat-text">Total votes submitted</p>
       </div>
 
       <div class="stat-card">
-        <span class="stat-icon purple">↗</span>
+        <span class="stat-icon purple"><i class="fa-solid fa-arrow-up"></i></span>
         <p class="stat-title">Candidates</p>
         <p class="stat-number">3</p>
         <p class="stat-text">Running in active elections</p>
@@ -63,7 +66,7 @@
           <h3>2026 General Election</h3>
           <p class="small">National general election for congressional representatives</p>
           <p class="ends">Ends: 11/1/2026, 8:00:00 PM</p>
-          <button class="vote-btn">Vote Now</button>
+          <a href="Election.html" class="vote-btn">Vote Now</a>
         </div>
       </div>
 
@@ -72,27 +75,27 @@
         <p class="panel-subtitle">Donate to candidates you believe in</p>
 
         <div class="candidate-card">
-          <span class="money">$</span>
+          <span class="money"><i class="fa-solid fa-dollar-sign"></i></span>
           <h3>Sarah Johnson</h3>
           <p class="small">Progressive Party</p>
           <p class="raised">Raised: $45,000</p>
-          <button class="donate-btn">Donate</button>
+          <a href="Donate_to_Candi.html" class="donate-btn">Donate</a>
         </div>
 
         <div class="candidate-card">
-          <span class="money">$</span>
+          <span class="money"><i class="fa-solid fa-dollar-sign"></i></span>
           <h3>Michael Chen</h3>
           <p class="small">Liberty Alliance</p>
           <p class="raised">Raised: $38,000</p>
-          <button class="donate-btn">Donate</button>
+          <a href="Donate_to_Candi.html" class="donate-btn">Donate</a>
         </div>
 
         <div class="candidate-card">
-          <span class="money">$</span>
+          <span class="money"><i class="fa-solid fa-dollar-sign"></i></span>
           <h3>Emily Rodriguez</h3>
           <p class="small">Unity Coalition</p>
           <p class="raised">Raised: $52,000</p>
-          <button class="donate-btn">Donate</button>
+          <a href="Donate_to_Candi.html" class="donate-btn">Donate</a>
         </div>
       </div>
     </section>

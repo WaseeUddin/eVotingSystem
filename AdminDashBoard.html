@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="AdminDashBoard.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo"><i class="fa-solid fa-square-check"></i></div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav>
+    <a href="AdminDashBoard.html">Dashboard</a>
+    <a href="ManageElections.html">Elections</a>
+    <a href="Live_Result_Counting.html">Results</a>
+    <a href="Anomaly_Detection_andRepoting.html">Anomalies</a>
+  </nav>
+
+  <div class="actions">
+    <button class="top-btn">Admin User <span class="role">(Admin)</span></button>
+    <a href="index.html" class="top-btn">Logout</a>
+  </div>
+</header>
+
+<main>
+  <h1>Admin Dashboard</h1>
+  <p class="subtitle">Manage elections, monitor voting, and ensure system integrity.</p>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="card">
+      <div class="icon blue"><i class="fa-solid fa-calendar-days"></i></div>
+      <p class="stat-title">Total Elections</p>
+      <p class="stat-number">2</p>
+      <p class="stat-text">1 currently active</p>
+    </div>
+
+    <div class="card">
+      <div class="icon green"><i class="fa-solid fa-arrow-up-right"></i></div>
+      <p class="stat-title">Total Votes</p>
+      <p class="stat-number">0</p>
+      <p class="stat-text">Across all elections</p>
+    </div>
+
+    <div class="card">
+      <div class="icon purple"><i class="fa-solid fa-users"></i></div>
+      <p class="stat-title">Candidates</p>
+      <p class="stat-number">3</p>
+      <p class="stat-text">Registered candidates</p>
+    </div>
+
+    <div class="card">
+      <div class="icon red"><i class="fa-solid fa-exclamation-triangle"></i></div>
+      <p class="stat-title">Anomalies</p>
+      <p class="stat-number">0</p>
+      <p class="stat-text">Unresolved issues</p>
+    </div>
+  </div>
+
+  <!-- PANELS -->
+  <div class="content">
+
+    <!-- LEFT -->
+    <div class="panel">
+      <h2>Active Elections</h2>
+      <p class="panel-sub">Elections currently accepting votes</p>
+      <a href="ManageElections.html" class="btn">Manage All</a>
+
+      <div class="election">
+        <span class="live">Live</span>
+        <h3>2026 General Election</h3>
+        <p class="small">National general election for congressional representatives</p>
+
+        <div class="bottom">
+          <span>0 votes cast</span>
+          <span>4425h remaining</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+<div class="panel">
+  <div class="panel-header">
+    <div>
+      <h2>System Anomalies</h2>
+      <p class="panel-sub">Issues requiring attention</p>
+    </div>
+    <a href="Anomaly_Detection_andRepoting.html" class="btn-outline">View All</a>
+  </div>
+
+  <div class="empty">
+    <div class="icon">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <p>No unresolved anomalies</p>
+    <small>System running smoothly</small>
+  </div>
+</div>
+
+  </div>
+</main>
+
+</body>
+</html>

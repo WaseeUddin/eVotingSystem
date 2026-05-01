@@ -29,17 +29,16 @@
       font-weight: 600;
     }
 
-    .logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #9700ff;
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 16px;
-    }
-
+.logo {
+  width: 48px;        /* 🔥 bigger */
+  height: 48px;       /* 🔥 bigger */
+  border-radius: 50%;
+  background: #9700ff;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 22px; 
+}
     nav {
       display: flex;
       gap: 42px;
@@ -57,15 +56,23 @@
       gap: 12px;
     }
 
-    .btn-top {
-      border: 1px solid #d8b8ff;
-      background: #fbf7ff;
-      color: #8100ff;
-      border-radius: 9px;
-      height: 34px;
-      padding: 0 14px;
-      font-size: 12px;
-    }
+.btn-top {
+  display: inline-flex;        /* 🔥 important */
+  align-items: center;         /* vertical center */
+  gap: 6px;                    /* icon + text gap */
+
+  border: 1px solid #d8b8ff;
+  background: #fbf7ff;
+  color: #8100ff;
+
+  border-radius: 9px;
+  height: 34px;
+  padding: 0 14px;
+
+  font-size: 12px;
+  text-decoration: none;       /* 🔥 remove underline */
+  cursor: pointer;
+}
 
     .role {
       font-size: 11px;

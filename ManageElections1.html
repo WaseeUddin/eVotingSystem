@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Election Modal</title>
+
+  <link rel="stylesheet" href="ManageElections1.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo">
+      <i class="fa-solid fa-square-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav>
+    <a href="AdminDashBoard.html">Dashboard</a>
+    <a href="ManageElections.html">Elections</a>
+    <a href="Live_Result_Counting.html">Results</a>
+    <a href="Anomaly_Detection_andRepoting.html">Anomalies</a>
+  </nav>
+
+  <div class="header-buttons">
+    <button>
+      <i class="fa-solid fa-shield-halved"></i>
+      Admin User <small>(Admin)</small>
+    </button>
+
+    <a href="index.html" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="page-top">
+    <div>
+      <h1>Manage Elections</h1>
+      <p class="subtitle">Create and control election time windows.</p>
+    </div>
+
+    <button class="create-btn">
+      <i class="fa-solid fa-plus"></i>
+      Create Election
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      2026 General Election
+      <span class="badge active">Active</span>
+    </div>
+
+    <p class="desc">National general election for congressional representatives</p>
+
+    <div class="info">
+      <span><i class="fa-regular fa-calendar"></i> Start: 11/1/2026, 8:00:00 AM</span>
+      <span><i class="fa-regular fa-clock"></i> End: 11/1/2026, 8:00:00 PM</span>
+    </div>
+
+    <div class="bottom">
+      <span>3 candidates registered</span>
+
+      <div class="actions">
+        <button><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+        <button><i class="fa-regular fa-trash-can"></i> Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      2026 Primary Election
+      <span class="badge completed">Completed</span>
+    </div>
+
+    <p class="desc">Primary election for party nominations</p>
+
+    <div class="info">
+      <span><i class="fa-regular fa-calendar"></i> Start: 6/15/2026, 8:00:00 AM</span>
+      <span><i class="fa-regular fa-clock"></i> End: 6/15/2026, 8:00:00 PM</span>
+    </div>
+
+    <div class="bottom">
+      <span>2 candidates registered</span>
+
+      <div class="actions">
+        <button><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+        <button><i class="fa-regular fa-trash-can"></i> Delete</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="overlay">
+  <div class="modal">
+    <a href="ManageElections.html" class="close">
+      <i class="fa-solid fa-xmark"></i>
+    </a>
+
+    <h2>Create New Election</h2>
+    <p class="modal-sub">Set up election details and time window for voting.</p>
+
+    <label>Election Title *</label>
+    <input type="text" placeholder="e.g., 2026 General Election" autofocus>
+
+    <label>Description *</label>
+    <textarea placeholder="Brief description of the election"></textarea>
+
+    <div class="date-row">
+      <div>
+        <label>Start Date & Time *</label>
+        <input type="text" placeholder="mm/dd/yyyy  --">
+      </div>
+
+      <div>
+        <label>End Date & Time *</label>
+        <input type="text" placeholder="mm/dd/yyyy  --">
+      </div>
+    </div>
+
+    <label>Select Candidates (0 selected) *</label>
+
+    <div class="candidate-box">
+      <label class="candidate">
+        <input type="checkbox">
+        <div>
+          <div class="name">Sarah Johnson</div>
+          <div class="party">Progressive Party</div>
+        </div>
+      </label>
+
+      <label class="candidate">
+        <input type="checkbox">
+        <div>
+          <div class="name">Michael Chen</div>
+          <div class="party">Liberty Alliance</div>
+        </div>
+      </label>
+
+      <label class="candidate">
+        <input type="checkbox">
+        <div>
+          <div class="name">Emily Rodriguez</div>
+          <div class="party">Unity Coalition</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="modal-footer">
+      <a href="ManageElections.html" class="cancel">Cancel</a>
+      <button class="submit">Create Election</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
