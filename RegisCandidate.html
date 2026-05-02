@@ -1,127 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register for E-Voting</title>
-  <link rel="stylesheet" href="RegisCandidate.css">
-  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register for E-Voting</title>
+    <link rel="stylesheet" href="RegisCandidate.css" />
+    <script
+      src="https://kit.fontawesome.com/cbcb94e751.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
+    <div class="page">
+      <a href="index.html" class="back">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </a>
 
-  <div class="page">
-
-    <a href="index.html" class="back">
-  <i class="fa-solid fa-arrow-left"></i> Back to Home
-</a>
-
-    <div class="top">
-      <div class="title">
-        <div class="icon"><i class="fa-solid fa-square-check"></i></div>
-        <h1>Register for E-Voting</h1>
-      </div>
-      <p>Create your account to participate in democratic elections</p>
-    </div>
-
-    <div class="card">
-
-      <div class="card-head">
-        <h3>Registration Form</h3>
-        <p>Fill in your details or scan your NID card for quick registration</p>
+      <div class="top">
+        <div class="title">
+          <div class="icon"><i class="fa-solid fa-square-check"></i></div>
+          <h1>Register for E-Voting</h1>
+        </div>
+        <p>Create your account to participate in democratic elections</p>
       </div>
 
-      <div class="form">
-
-        <label>Register as *</label>
-        <div class="role-box">
-          <button><i class="fa-solid fa-user-group"></i><a href="RegisVoter.html">Voter</a></button>
-          <button class="active"><i class="fa-solid fa-square-check"></i> <a href="RegisCandidate.html">Candidate</a></button>
-          <button><i class="fa-solid fa-shield"></i><a href="RegisAdmin.html">Admin</a></button>
+      <div class="card">
+        <div class="card-head">
+          <h3>Registration Form</h3>
+          <p>
+            Fill in your details or scan your NID card for quick registration
+          </p>
         </div>
 
-        <div class="scan">
-          <span><i class="fa-solid fa-expand"></i>  Scan your NID card to auto-fill your information</span>
-          <button><i class="fa-solid fa-arrow-up-from-bracket"></i> Scan NID</button>
-        </div>
-
-        <div class="section">
-          <h3>Personal Information</h3>
-
-          <div class="field">
-            <label>Full Name (as per NID) *</label>
-            <input type="text" placeholder="John Doe">
+        <div class="form">
+          <label>Register as *</label>
+          <div class="role-box">
+            <button>
+              <i class="fa-solid fa-user-group"></i
+              ><a href="RegisVoter.html">Voter</a>
+            </button>
+            <button class="active">
+              <i class="fa-solid fa-square-check"></i>
+              <a href="RegisCandidate.html">Candidate</a>
+            </button>
+            <button>
+              <i class="fa-solid fa-shield"></i
+              ><a href="RegisAdmin.html">Admin</a>
+            </button>
           </div>
 
-          <div class="field">
-            <label>National ID Number *</label>
-            <input type="text" placeholder="1234567890123">
+          <div class="scan">
+            <span
+              ><i class="fa-solid fa-expand"></i> Scan your NID card to
+              auto-fill your information</span
+            >
+            <button id="scanNidBtn" type="button">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i> Scan NID
+            </button>
+            <input
+              type="file"
+              id="nidImageInput"
+              accept="image/*"
+              style="display: none"
+            />
           </div>
 
-          <div class="row">
+          <div class="section">
+            <h3>Personal Information</h3>
+
             <div class="field">
-              <label>Date of Birth *</label>
-              <input type="date">
+              <label>Full Name (as per NID) *</label>
+              <input type="text" placeholder="John Doe" />
             </div>
 
             <div class="field">
-              <label>Religion *</label>
-              <select>
-                <option>Select religion</option>
-                <option>Islam</option>
-                <option>Hindu</option>
-                <option>Christian</option>
-                <option>Buddhist</option>
-              </select>
+              <label>National ID Number *</label>
+              <input type="text" placeholder="1234567890123" />
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label>Date of Birth *</label>
+                <input type="date" />
+              </div>
+
+              <div class="field">
+                <label>Religion *</label>
+                <select>
+                  <option>Select religion</option>
+                  <option>Islam</option>
+                  <option>Hindu</option>
+                  <option>Christian</option>
+                  <option>Buddhist</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="section">
-          <h3>Contact Information</h3>
+          <div class="section">
+            <h3>Contact Information</h3>
 
-          <div class="field">
-            <label>Email Address *</label>
-            <input type="email" placeholder="john@example.com">
+            <div class="field">
+              <label>Email Address *</label>
+              <input type="email" placeholder="john@example.com" />
+            </div>
+
+            <div class="field">
+              <label>Phone Number *</label>
+              <input type="text" placeholder="+1 234 567 8900" />
+            </div>
           </div>
 
-          <div class="field">
-            <label>Phone Number *</label>
-            <input type="text" placeholder="+1 234 567 8900">
+          <div class="section">
+            <h3>Security</h3>
+
+            <div class="field">
+              <label>Password *</label>
+              <input type="password" placeholder="Minimum 8 characters" />
+            </div>
+
+            <div class="field">
+              <label>Confirm Password *</label>
+              <input type="password" placeholder="Re-enter your password" />
+            </div>
+          </div>
+
+          <label>Verification Method *</label>
+          <div class="verify">
+            <button class="active">
+              <i class="fa-solid fa-envelope"></i> Verify by Email
+            </button>
+            <button><i class="fa-solid fa-phone"></i> Verify by SMS</button>
+          </div>
+
+          <button class="submit">
+            <a href="Verification.html">Continue to Verification</a>
+          </button>
+
+          <hr />
+
+          <div class="login">
+            Already have an account?
+            <a href="logincandidate.html">Login here</a>
           </div>
         </div>
-
-        <div class="section">
-          <h3>Security</h3>
-
-          <div class="field">
-            <label>Password *</label>
-            <input type="password" placeholder="Minimum 8 characters">
-          </div>
-
-          <div class="field">
-            <label>Confirm Password *</label>
-            <input type="password" placeholder="Re-enter your password">
-          </div>
-        </div>
-
-        <label>Verification Method *</label>
-        <div class="verify">
-          <button class="active"><i class="fa-solid fa-envelope"></i> Verify by Email</button>
-          <button><i class="fa-solid fa-phone"></i> Verify by SMS</button>
-        </div>
-
-        <button class="submit"><a href="Verification.html">Continue to Verification</a></button>
-
-        <hr>
-
-        <div class="login">
-          Already have an account? <a href="logincandidate.html">Login here</a>
-        </div>
-
       </div>
     </div>
-  </div>
 
-</body>
+    <script>
+      // NID Scan Functionality
+      const scanNidBtn = document.getElementById("scanNidBtn");
+      const nidImageInput = document.getElementById("nidImageInput");
+
+      // Mock NID database - simulate extracted data from scanned NID
+      const mockNidDatabase = {
+        1234567890123: {
+          name: "Md. Abdul Rahman",
+          dob: "1990-05-15",
+          religion: "Islam",
+        },
+        9876543210987: {
+          name: "Fatima Ahmed",
+          dob: "1992-08-22",
+          religion: "Islam",
+        },
+        1111111111111: {
+          name: "Ravi Kumar",
+          dob: "1988-03-10",
+          religion: "Hindu",
+        },
+      };
+
+      // Trigger file input when Scan NID button is clicked
+      scanNidBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        nidImageInput.click();
+      });
+
+      // Handle file selection
+      nidImageInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          // Simulate NID scanning - in real app, this would use OCR
+          simulateNidScan(file);
+        }
+      });
+
+      // Simulate NID scanning process
+      function simulateNidScan(file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          // Simulate OCR extraction - randomly select from mock database
+          const nidNumbers = Object.keys(mockNidDatabase);
+          const randomNid =
+            nidNumbers[Math.floor(Math.random() * nidNumbers.length)];
+          const nidData = mockNidDatabase[randomNid];
+
+          // Auto-fill the form with extracted data
+          const fullNameInput = document.querySelector(
+            'input[placeholder="John Doe"]',
+          );
+          const nidInput = document.querySelector(
+            'input[placeholder="1234567890123"]',
+          );
+          const dobInput = document.querySelector('input[type="date"]');
+          const religionSelect = document.querySelector("select");
+
+          if (fullNameInput) fullNameInput.value = nidData.name;
+          if (nidInput) nidInput.value = randomNid;
+          if (dobInput) dobInput.value = nidData.dob;
+          if (religionSelect) religionSelect.value = nidData.religion;
+
+          // Show success message
+          alert(
+            "✓ NID Scan Successful!\n\nExtracted Information:\n• Name: " +
+              nidData.name +
+              "\n• NID: " +
+              randomNid +
+              "\n• DOB: " +
+              nidData.dob +
+              "\n• Religion: " +
+              nidData.religion,
+          );
+        };
+
+        reader.readAsDataURL(file);
+      }
+    </script>
+  </body>
 </html>

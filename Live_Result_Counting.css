@@ -104,9 +104,14 @@ h1 {
   font-size: 12px;
   margin-bottom: 28px;
   color: #16004d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border: 1px solid #e4d3ff;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316004d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
 }
 
 .stats {
@@ -165,6 +170,26 @@ h1 {
   font-size: 11px;
   font-weight: bold;
   margin-bottom: 6px;
+}
+
+.status.active {
+  background: #d8ffe7;
+  color: #00a63e;
+}
+
+.status.completed {
+  background: #e2e2e2;
+  color: #666;
+}
+
+.status.open {
+  background: #fff3b5;
+  color: #cc9900;
+}
+
+.status.pending {
+  background: #ffe2d8;
+  color: #cc6600;
 }
 
 .panel {
@@ -287,4 +312,16 @@ h1 {
 .pending {
   background: #eee;
   color: #333;
+}
+
+/* Select element styling */
+.select-box:focus {
+  outline: 2px solid #9700ff;
+  outline-offset: -1px;
+}
+
+.select-box option {
+  background: #fff;
+  color: #16004d;
+  padding: 8px;
 }

@@ -1,156 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Live Results</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Results</title>
 
-<link rel="stylesheet" href="Live_Result_Counting.css">
-<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="Live_Result_Counting.css" />
+    <script
+      src="https://kit.fontawesome.com/cbcb94e751.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
-<header>
-  <div class="brand">
-    <div class="logo">
-      <i class="fa-solid fa-square-check"></i>
-    </div>
-    <span>E-Voting System</span>
-  </div>
-
-  <nav>
-    <a href="AdminDashBoard.html">Dashboard</a>
-    <a href="ManageElections.html">Elections</a>
-    <a href="Live_Result_Counting.html">Results</a>
-    <a href="Anomaly_Detection_andRepoting.html">Anomalies</a>
-  </nav>
-
-  <div class="actions">
-    <button class="top-btn">
-      <i class="fa-solid fa-shield-halved"></i>
-      Admin User <small>(Admin)</small>
-    </button>
-
-    <a href="index.html" class="top-btn">
-      <i class="fa-solid fa-arrow-right-from-bracket"></i>
-      Logout
-    </a>
-  </div>
-</header>
-
-<main>
-  <h1>Live Results & Counting</h1>
-  <p class="subtitle">Real-time election results and vote tracking.</p>
-
-  <p class="label">Select Election</p>
-  <div class="select-box">
-    <span>2026 General Election - active</span>
-    <i class="fa-solid fa-chevron-down"></i>
-  </div>
-
-  <section class="stats">
-    <div class="stat">
-      <span class="stat-icon blue">
-        <i class="fa-solid fa-square-poll-vertical"></i>
-      </span>
-      <p class="stat-title">Total Votes Cast</p>
-      <p class="stat-number">0</p>
-      <p class="stat-text">Votes recorded</p>
-    </div>
-
-    <div class="stat">
-      <span class="stat-icon orange">
-        <i class="fa-solid fa-trophy"></i>
-      </span>
-      <p class="stat-title">Leading Candidate</p>
-      <p class="stat-number" style="font-size:16px;">Sarah Johnson</p>
-      <p class="stat-text">0.0% of votes</p>
-    </div>
-
-    <div class="stat">
-      <span class="stat-icon green">
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </span>
-      <p class="stat-title">Election Status</p>
-      <span class="status">ACTIVE</span>
-      <p class="stat-text">11/1/2026</p>
-    </div>
-  </section>
-
-  <section class="panel">
-    <h2>Vote Distribution</h2>
-    <p class="panel-sub">Live counting results for 2026 General Election</p>
-    <div class="chart-icon">
-      <i class="fa-solid fa-chart-column"></i>
-    </div>
-
-    <div class="candidate-row">
-      <div class="candidate-top">
-        <div class="rank r1">1</div>
-        <div>
-          <div class="name">Sarah Johnson</div>
-          <div class="party">Progressive Party</div>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <i class="fa-solid fa-square-check"></i>
         </div>
-        <div class="vote-count">0<div class="percent">0.0%</div></div>
+        <span>E-Voting System</span>
       </div>
-      <div class="bar"></div>
-    </div>
 
-    <div class="candidate-row">
-      <div class="candidate-top">
-        <div class="rank r2">2</div>
-        <div>
-          <div class="name">Michael Chen</div>
-          <div class="party">Liberty Alliance</div>
+      <nav>
+        <a href="AdminDashBoard.html">Dashboard</a>
+        <a href="ManageElections.html">Elections</a>
+        <a href="Live_Result_Counting.html">Results</a>
+        <a href="Anomaly_Detection_andRepoting.html">Anomalies</a>
+      </nav>
+
+      <div class="actions">
+        <button class="top-btn">
+          <i class="fa-solid fa-shield-halved"></i>
+          Admin User <small>(Admin)</small>
+        </button>
+
+        <a href="index.html" class="top-btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          Logout
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <h1>Live Results & Counting</h1>
+      <p class="subtitle">Real-time election results and vote tracking.</p>
+
+      <p class="label">Select Election</p>
+      <select class="select-box" id="electionSelect">
+        <option value="2026-general">2026 General Election - active</option>
+        <option value="2026-local">2026 Local Elections</option>
+        <option value="2026-special">2026 Special By-elections</option>
+        <option value="2025-referendum">2025 Referendum</option>
+        <option value="2024-general">2024 General Election - completed</option>
+      </select>
+
+      <section class="stats">
+        <div class="stat">
+          <span class="stat-icon blue">
+            <i class="fa-solid fa-square-poll-vertical"></i>
+          </span>
+          <p class="stat-title">Total Votes Cast</p>
+          <p class="stat-number">0</p>
+          <p class="stat-text">Votes recorded</p>
         </div>
-        <div class="vote-count">0<div class="percent">0.0%</div></div>
-      </div>
-      <div class="bar"></div>
-    </div>
 
-    <div class="candidate-row">
-      <div class="candidate-top">
-        <div class="rank r3">3</div>
-        <div>
-          <div class="name">Emily Rodriguez</div>
-          <div class="party">Unity Coalition</div>
+        <div class="stat">
+          <span class="stat-icon orange">
+            <i class="fa-solid fa-trophy"></i>
+          </span>
+          <p class="stat-title">Leading Candidate</p>
+          <p class="stat-number" style="font-size: 16px">Sarah Johnson</p>
+          <p class="stat-text">0.0% of votes</p>
         </div>
-        <div class="vote-count">0<div class="percent">0.0%</div></div>
-      </div>
-      <div class="bar"></div>
-    </div>
-  </section>
 
-  <section class="panel">
-    <h2>Election Timeline</h2>
-    <p class="panel-sub">Voting window and deadlines</p>
+        <div class="stat">
+          <span class="stat-icon green">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+          <p class="stat-title">Election Status</p>
+          <span class="status">ACTIVE</span>
+          <p class="stat-text">11/1/2026</p>
+        </div>
+      </section>
 
-    <div class="timeline-item">
-      <div>
-        <p class="timeline-title">Voting Start</p>
-        <p class="timeline-date">11/1/2026, 8:00:00 AM</p>
-      </div>
-      <span class="timeline-badge started">Started</span>
-    </div>
+      <section class="panel">
+        <h2>Vote Distribution</h2>
+        <p class="panel-sub">Live counting results for 2026 General Election</p>
+        <div class="chart-icon">
+          <i class="fa-solid fa-chart-column"></i>
+        </div>
 
-    <div class="timeline-item">
-      <div>
-        <p class="timeline-title">Voting End</p>
-        <p class="timeline-date">11/1/2026, 8:00:00 PM</p>
-      </div>
-      <span class="timeline-badge open">Open</span>
-    </div>
+        <div class="candidate-row">
+          <div class="candidate-top">
+            <div class="rank r1">1</div>
+            <div>
+              <div class="name">Sarah Johnson</div>
+              <div class="party">Progressive Party</div>
+            </div>
+            <div class="vote-count">
+              0
+              <div class="percent">0.0%</div>
+            </div>
+          </div>
+          <div class="bar"></div>
+        </div>
 
-    <div class="timeline-item">
-      <div>
-        <p class="timeline-title">Result Certification</p>
-        <p class="timeline-date">After voting deadline</p>
-      </div>
-      <span class="timeline-badge pending">Pending</span>
-    </div>
-  </section>
-</main>
+        <div class="candidate-row">
+          <div class="candidate-top">
+            <div class="rank r2">2</div>
+            <div>
+              <div class="name">Michael Chen</div>
+              <div class="party">Liberty Alliance</div>
+            </div>
+            <div class="vote-count">
+              0
+              <div class="percent">0.0%</div>
+            </div>
+          </div>
+          <div class="bar"></div>
+        </div>
 
-</body>
+        <div class="candidate-row">
+          <div class="candidate-top">
+            <div class="rank r3">3</div>
+            <div>
+              <div class="name">Emily Rodriguez</div>
+              <div class="party">Unity Coalition</div>
+            </div>
+            <div class="vote-count">
+              0
+              <div class="percent">0.0%</div>
+            </div>
+          </div>
+          <div class="bar"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Election Timeline</h2>
+        <p class="panel-sub">Voting window and deadlines</p>
+
+        <div class="timeline-item">
+          <div>
+            <p class="timeline-title">Voting Start</p>
+            <p class="timeline-date">11/1/2026, 8:00:00 AM</p>
+          </div>
+          <span class="timeline-badge started">Started</span>
+        </div>
+
+        <div class="timeline-item">
+          <div>
+            <p class="timeline-title">Voting End</p>
+            <p class="timeline-date">11/1/2026, 8:00:00 PM</p>
+          </div>
+          <span class="timeline-badge open">Open</span>
+        </div>
+
+        <div class="timeline-item">
+          <div>
+            <p class="timeline-title">Result Certification</p>
+            <p class="timeline-date">After voting deadline</p>
+          </div>
+          <span class="timeline-badge pending">Pending</span>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Election data
+      const electionData = {
+        "2026-general": {
+          name: "2026 General Election",
+          status: "ACTIVE",
+          date: "11/1/2026",
+          votes: 1250,
+          candidates: [
+            { name: "Sarah Johnson", party: "Progressive Party", votes: 450 },
+            { name: "Michael Chen", party: "Liberty Alliance", votes: 520 },
+            { name: "Emily Rodriguez", party: "Unity Coalition", votes: 280 },
+          ],
+        },
+        "2026-local": {
+          name: "2026 Local Elections",
+          status: "OPEN",
+          date: "11/8/2026",
+          votes: 0,
+          candidates: [
+            { name: "John Smith", party: "Green Party", votes: 0 },
+            { name: "Maria Garcia", party: "Democratic Front", votes: 0 },
+            { name: "David Lee", party: "Conservative League", votes: 0 },
+          ],
+        },
+        "2026-special": {
+          name: "2026 Special By-elections",
+          status: "PENDING",
+          date: "12/15/2026",
+          votes: 0,
+          candidates: [
+            { name: "Patricia Jones", party: "Socialist Alliance", votes: 0 },
+            { name: "Robert Williams", party: "Independent", votes: 0 },
+            { name: "Lisa Anderson", party: "National Party", votes: 0 },
+          ],
+        },
+        "2025-referendum": {
+          name: "2025 Referendum",
+          status: "COMPLETED",
+          date: "6/15/2025",
+          votes: 5200,
+          candidates: [
+            { name: "Yes", party: "Approval", votes: 3120 },
+            { name: "No", party: "Rejection", votes: 2080 },
+          ],
+        },
+        "2024-general": {
+          name: "2024 General Election",
+          status: "COMPLETED",
+          date: "11/5/2024",
+          votes: 8900,
+          candidates: [
+            { name: "Thomas Brown", party: "Ruling Party", votes: 4200 },
+            { name: "Jennifer White", party: "Opposition", votes: 3100 },
+            { name: "William Davis", party: "Third Way", votes: 1600 },
+          ],
+        },
+      };
+
+      // Get the select element
+      const electionSelect = document.getElementById("electionSelect");
+
+      // Update dashboard when election is selected
+      electionSelect.addEventListener("change", function () {
+        const selectedId = this.value;
+        const election = electionData[selectedId];
+
+        if (election) {
+          updateDashboard(election);
+        }
+      });
+
+      // Update dashboard function
+      function updateDashboard(election) {
+        // Update stats
+        document.querySelectorAll(".stat-number")[0].textContent =
+          election.votes;
+        document.querySelectorAll(".stat-number")[1].textContent =
+          election.candidates[0].name;
+        document.querySelectorAll(".stat-number")[1].style.fontSize = "16px";
+
+        // Update status
+        const status = document.querySelector(".status");
+        status.textContent = election.status;
+        status.className = "status " + election.status.toLowerCase();
+
+        // Update date
+        document.querySelectorAll(".stat-text")[2].textContent = election.date;
+
+        // Update panel subtitle
+        document.querySelector(".panel-sub").textContent =
+          `Live counting results for ${election.name}`;
+
+        // Update candidates
+        const candidateRows = document.querySelectorAll(".candidate-row");
+        election.candidates.forEach((candidate, index) => {
+          if (candidateRows[index]) {
+            const totalVotes = election.votes > 0 ? election.votes : 1;
+            const percentage =
+              election.votes > 0
+                ? ((candidate.votes / totalVotes) * 100).toFixed(1)
+                : 0;
+
+            candidateRows[index].querySelector(".name").textContent =
+              candidate.name;
+            candidateRows[index].querySelector(".party").textContent =
+              candidate.party;
+            candidateRows[index].querySelector(".vote-count").innerHTML =
+              `${candidate.votes}<div class="percent">${percentage}%</div>`;
+
+            const bar = candidateRows[index].querySelector(".bar");
+            bar.style.width = percentage + "%";
+            bar.style.height = "6px";
+            bar.style.background = "#9700ff";
+            bar.style.borderRadius = "3px";
+          }
+        });
+
+        // Update timeline
+        const timelineItems = document.querySelectorAll(".timeline-item");
+        if (timelineItems.length >= 3) {
+          timelineItems[1].querySelector(".timeline-date").textContent =
+            `${election.date}, 8:00:00 PM`;
+        }
+      }
+
+      // Initialize with default data
+      document.addEventListener("DOMContentLoaded", function () {
+        updateDashboard(electionData["2026-general"]);
+      });
+    </script>
+  </body>
 </html>
