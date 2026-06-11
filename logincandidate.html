@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login to E-Voting</title>
+
+<link rel="stylesheet" href="loginvoter.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+  <a href="index.html" class="back">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Home
+  </a>
+
+  <div class="header">
+    <div class="title-row">
+      <div class="logo">
+        <i class="fa-solid fa-square-check"></i>
+      </div>
+      <h1>Login to E-Voting</h1>
+    </div>
+
+    <p class="subtitle">
+      Access your account to participate in elections
+    </p>
+  </div>
+
+  <div class="tabs">
+    <a href="loginvoter.html" class="tab">
+      <i class="fa-solid fa-users"></i>
+      Voter
+    </a>
+
+    <a href="logincandidate.html" class="tab active">
+      <i class="fa-solid fa-square-check"></i>
+      Candidate
+    </a>
+
+    <a href="loginadmin.html" class="tab">
+      <i class="fa-solid fa-shield"></i>
+      Admin
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>Candidate Login</h2>
+      <p>Sign in to manage your campaign</p>
+    </div>
+
+    <form class="form">
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="candidate@example.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="••••••••" required>
+
+      <a href="canhome.html" class="login-btn">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Login as Candidate
+      </a>
+
+      <div class="divider">
+        Dont have an account?
+        <a href="RegisCandidate.html">Register here</a>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+<script src="js/login.js?v=4"></script>
+</body>
+</html>

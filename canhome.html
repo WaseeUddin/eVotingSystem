@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Candidate Dashboard</title>
+<link rel="stylesheet" href="candidate_all.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="canhome.html" class="home-link active">Dashboard</a>
+    <a href="canprofile.html" class="profile-link">Profile</a>
+    <a href="cancampain.html" class="campaign-link">Campaign</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="user-btn">
+      <i class="fa-solid fa-user"></i>
+      <span id="headerCandidateName">Candidate</span>
+      <span class="role">(Candidate)</span>
+    </button>
+
+    <a href="index.html" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+  <h1>Candidate Dashboard</h1>
+  <p class="subtitle">Manage your campaign and track your progress.</p>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span class="stat-icon green"><i class="fa-solid fa-dollar-sign"></i></span>
+      <p class="stat-title">Total Donations</p>
+      <p class="stat-number" id="totalDonations">$0</p>
+      <p class="stat-text">Campaign funding raised</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon blue"><i class="fa-solid fa-vote-yea"></i></span>
+      <p class="stat-title">Votes Received</p>
+      <p class="stat-number" id="votesReceived">0</p>
+      <p class="stat-text">Total votes cast for you</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon purple"><i class="fa-solid fa-arrow-up"></i></span>
+      <p class="stat-title">Active Campaigns</p>
+      <p class="stat-number" id="activeCampaigns">0</p>
+      <p class="stat-text">Elections you're in</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon red"><i class="fa-solid fa-heart"></i></span>
+      <p class="stat-title">Supporters</p>
+      <p class="stat-number" id="supporters">0</p>
+      <p class="stat-text">Individual donors</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="panel">
+      <h2>Your Profile</h2>
+      <p class="panel-sub">Campaign information and agendas</p>
+
+      <p class="profile-name" id="profileName">Loading...</p>
+      <p class="party" id="candidateParty">Loading...</p>
+
+      <p class="section-title">Campaign Statement</p>
+      <p class="statement" id="candidateStatement">
+        Loading...
+      </p>
+
+      <p class="section-title" id="agendaCount">Key Agendas (0/7)</p>
+
+      <div id="agendaList">
+        <p>Loading agendas...</p>
+      </div>
+
+      <a href="canprofile.html" class="edit-btn">Edit Profile</a>
+    </div>
+
+    <div class="panel">
+      <h2>Campaign Performance</h2>
+      <p class="panel-sub">Your presence in active elections</p>
+
+      <div id="campaignPerformanceList">
+        <p>Loading campaign performance...</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/candidateDashboard.js?v=1"></script>
+</body>
+</html>

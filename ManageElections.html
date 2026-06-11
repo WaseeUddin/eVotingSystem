@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Elections</title>
+
+  <link rel="stylesheet" href="ManageElections.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav>
+    <a href="AdminDashBoard.html" class="dashboard-link">Dashboard</a>
+    <a href="ManageElections.html" class="elections-link active">Elections</a>
+    <a href="Live_Result_Counting.html" class="results-link">Results</a>
+    <a href="Anomaly_Detection_andRepoting.html" class="anomalies-link">Anomalies</a>
+  </nav>
+
+  <div class="actions">
+    <button class="top-btn">
+      <i class="fa-solid fa-shield-halved"></i>
+      Admin User <span class="role">(Admin)</span>
+    </button>
+
+    <a href="index.html" class="top-btn logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-top">
+    <div>
+      <h1>Manage Elections</h1>
+      <p class="subtitle">Create and control election time windows.</p>
+    </div>
+
+    <a href="ManageElections1.html" class="create-btn">
+      <i class="fa-solid fa-plus"></i>
+      Create Election
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      2026 General Election
+      <span class="badge active">Active</span>
+    </div>
+
+    <p class="desc">
+      National general election for congressional representatives
+    </p>
+
+    <div class="info">
+      <span><i class="fa-regular fa-calendar"></i> Start: 11/1/2026, 8:00:00 AM</span>
+      <span><i class="fa-regular fa-clock"></i> End: 11/1/2026, 8:00:00 PM</span>
+    </div>
+
+    <div class="bottom">
+      <span>3 candidates registered</span>
+
+      <div class="card-actions">
+        <button><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+        <button class="delete"><i class="fa-regular fa-trash-can"></i> Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      2026 Primary Election
+      <span class="badge completed">Completed</span>
+    </div>
+
+    <p class="desc">
+      Primary election for party nominations
+    </p>
+
+    <div class="info">
+      <span><i class="fa-regular fa-calendar"></i> Start: 6/15/2026, 8:00:00 AM</span>
+      <span><i class="fa-regular fa-clock"></i> End: 6/15/2026, 8:00:00 PM</span>
+    </div>
+
+    <div class="bottom">
+      <span>2 candidates registered</span>
+
+      <div class="card-actions">
+        <button><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+        <button class="delete"><i class="fa-regular fa-trash-can"></i> Delete</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login to E-Voting</title>
+
+<link rel="stylesheet" href="loginvoter.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- Back -->
+  <a href="index.html" class="back">
+    <i class="fa-solid fa-arrow-left"></i> Back to Home
+  </a>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title-row">
+      <div class="logo">
+        <i class="fa-solid fa-square-check"></i>
+      </div>
+      <h1>Login to E-Voting</h1>
+    </div>
+    <p class="subtitle">
+      Access your account to participate in elections
+    </p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <a href="loginvoter.html" class="tab">
+      <i class="fa-solid fa-users"></i>
+      Voter
+    </a>
+
+    <a href="logincandidate.html" class="tab">
+      <i class="fa-solid fa-square-check"></i>
+      Candidate
+    </a>
+
+    <a href="loginadmin.html" class="tab active">
+      <i class="fa-solid fa-shield"></i>
+      Admin
+    </a>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+
+    <div class="card-head">
+      <h2>Admin Login</h2>
+      <p>Sign in to manage the voting system</p>
+    </div>
+
+    <form class="form">
+
+      <!-- Email -->
+      <label>Email</label>
+      <input type="email" placeholder="admin@example.com" required>
+
+      <!-- Password -->
+      <label>Password</label>
+      <input type="password" placeholder="••••••••" required>
+
+      <!-- Button -->
+      <a href="AdminDashBoard.html" class="login-btn">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Login as Admin
+      </a>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="js/login.js?v=4"></script>
+</body>
+</html>

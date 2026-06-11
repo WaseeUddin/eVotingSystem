@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Edit Profile</title>
+<link rel="stylesheet" href="candidate_all.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="canhome.html" class="home-link">Dashboard</a>
+    <a href="canprofile.html" class="profile-link active">Profile</a>
+    <a href="cancampain.html" class="campaign-link">Campaign</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="user-btn">
+      <i class="fa-solid fa-user"></i>
+      <span id="headerCandidateName">Candidate</span>
+      <span class="role">(Candidate)</span>
+    </button>
+
+    <a href="backend/logout.php" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main class="profile-main">
+  <h1>Edit Profile</h1>
+  <p class="subtitle">Update your campaign information and key agendas.</p>
+
+  <section class="section">
+    <h2>Donation Balance</h2>
+    <p class="section-sub">Total donation received by your campaign</p>
+    <br>
+
+    <p class="stat-number" id="profileTotalRaised">$0</p>
+  </section>
+
+  <section class="section">
+    <h2>Basic Information</h2>
+    <p class="section-sub">Your name and party affiliation</p>
+    <br>
+
+    <label>Full Name *</label>
+    <input id="profileName" type="text" value="">
+
+    <label>Party Affiliation *</label>
+    <input id="profileParty" type="text" value="">
+  </section>
+
+  <section class="section">
+    <h2>Campaign Statement</h2>
+    <p class="section-sub">Your vision and message to voters</p>
+    <br>
+
+    <label>Campaign Statement *</label>
+    <textarea id="profileStatement"></textarea>
+    <p class="char-count" id="charCount">0 characters</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2 id="agendaHeading">Key Agendas (0/7)</h2>
+        <p class="section-sub">Define your key policy positions</p>
+      </div>
+
+      <button type="button" class="add-btn" id="addAgendaBtn">
+        <i class="fa-solid fa-plus"></i> Add Agenda
+      </button>
+    </div>
+
+    <div id="agendaContainer"></div>
+  </section>
+
+  <div class="footer">
+    <button type="button" class="cancel" id="cancelProfileBtn">Cancel</button>
+
+    <button type="button" class="save" id="saveProfileBtn">
+      <i class="fa-solid fa-save"></i> Save Profile
+    </button>
+  </div>
+</main>
+
+<script src="js/candidateProfile.js?v=3"></script>
+</body>
+</html>

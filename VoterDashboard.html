@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voter Dashboard</title>
+  <link rel="stylesheet" href="Allfile_Voter.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="VoterDashboard.html" class="dashboard-link active">Dashboard</a>
+    <a href="Election.html" class="election-link">Elections</a>
+    <a href="Donate_to_Candi.html" class="donation-link">Donations</a>
+  </nav>
+
+  <div class="actions">
+    <button class="user-btn">
+      <i class="fa-solid fa-heart"></i>
+      <span class="voter-name-text">Voter</span>
+      <span class="role">(Voter)</span>
+    </button>
+
+    <a href="backend/logout.php" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <div class="top">
+    <div>
+      <h1>Voter Dashboard</h1>
+      <p id="voterWelcome">Welcome back! Exercise your democratic rights.</p>
+    </div>
+
+    <a href="VoterDashboardCreateElection.html" class="create-btn">
+      <i class="fa-solid fa-plus"></i> Create Election
+    </a>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Active Elections</h4>
+      <h2 id="activeElectionCount">0</h2>
+      <p>Elections you can vote in</p>
+    </div>
+
+    <div class="card">
+      <h4>Votes Cast</h4>
+      <h2 id="votesCastCount">0</h2>
+      <p>Total votes submitted</p>
+    </div>
+
+    <div class="card">
+      <h4>Candidates</h4>
+      <h2 id="candidateCount">0</h2>
+      <p>Running candidates</p>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="box">
+      <h3>Active Elections</h3>
+      <p>Elections currently open for voting</p>
+
+      <div id="activeElectionList">
+        <p>Loading active elections...</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>Support Candidates</h3>
+      <p>All candidates and donation amounts are loaded from database</p>
+
+      <div id="supportCandidateList">
+        <p>Loading candidates...</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="js/dashboard.js?v=2000"></script>
+<script src="js/voterHeader.js?v=1000"></script>
+</body>
+</html>

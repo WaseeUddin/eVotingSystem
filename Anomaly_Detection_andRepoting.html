@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anomaly Detection</title>
+  <link rel="stylesheet" href="Anomaly_Detection_andRepoting.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav>
+    <a href="AdminDashBoard.html" class="dashboard-link">Dashboard</a>
+    <a href="ManageElections.html" class="elections-link">Elections</a>
+    <a href="Live_Result_Counting.html" class="results-link">Results</a>
+    <a href="Anomaly_Detection_andRepoting.html" class="anomalies-link active">Anomalies</a>
+  </nav>
+
+  <div class="actions">
+    <button class="top-btn">
+      <i class="fa-solid fa-shield-halved"></i>
+      Admin User <span class="role">(Admin)</span>
+    </button>
+
+    <a href="index.html" class="top-btn logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="top">
+    <div>
+      <h1>Anomaly Detection & Reporting</h1>
+      <p class="subtitle">Monitor and resolve system irregularities.</p>
+    </div>
+
+    <a href="Anomaly_Detection_andRepoting1.html" class="report-btn">
+      <i class="fa-solid fa-plus"></i>
+      Report Anomaly
+    </a>
+  </div>
+
+  <section class="stats">
+    <div class="card">
+      <span class="icon red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <p class="card-title">Total Anomalies</p>
+      <p class="number">0</p>
+      <p class="text">All time reports</p>
+    </div>
+
+    <div class="card">
+      <span class="icon red"><i class="fa-solid fa-clock"></i></span>
+      <p class="card-title">Unresolved</p>
+      <p class="number">0</p>
+      <p class="text">Requires attention</p>
+    </div>
+
+    <div class="card">
+      <span class="icon green"><i class="fa-solid fa-check"></i></span>
+      <p class="card-title">Resolved</p>
+      <p class="number">0</p>
+      <p class="text">Issues fixed</p>
+    </div>
+  </section>
+
+  <section class="empty-box">
+    <div class="check"><i class="fa-solid fa-check"></i></div>
+    <p class="empty-title">No anomalies reported</p>
+    <p class="empty-sub">System is running smoothly</p>
+  </section>
+</main>
+
+<script src="js/anomaly.js"></script>
+</body>
+</html>

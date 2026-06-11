@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Anomaly</title>
+  <link rel="stylesheet" href="Anomaly_Detection_andRepoting1.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="modal">
+    <a href="Anomaly_Detection_andRepoting.html" class="close">
+      <i class="fa-solid fa-xmark"></i>
+    </a>
+
+    <h2>Report System Anomaly</h2>
+    <p class="modal-sub">Document any irregular activity or system issues.</p>
+
+    <label>Related Election *</label>
+    <select>
+      <option selected disabled>Select election</option>
+      <option>2026 General Election</option>
+      <option>2026 Primary Election</option>
+    </select>
+
+    <label>Anomaly Type *</label>
+    <select>
+      <option selected disabled>Select type</option>
+      <option>Duplicate Vote</option>
+      <option>Invalid Vote</option>
+      <option>Unauthorized Access</option>
+      <option>System Error</option>
+      <option>Suspicious Activity</option>
+      <option>Data Inconsistency</option>
+      <option>Other</option>
+    </select>
+
+    <label>Description *</label>
+    <textarea placeholder="Describe the anomaly in detail..."></textarea>
+
+    <div class="modal-footer">
+      <a href="Anomaly_Detection_andRepoting.html" class="cancel">Cancel</a>
+      <button class="submit">Report Anomaly</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

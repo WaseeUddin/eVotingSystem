@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Register for E-Voting</title>
+
+  <link rel="stylesheet" href="RegisCandidate.css" />
+
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <a href="index.html" class="back">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Home
+    </a>
+
+    <div class="top">
+
+      <div class="title">
+
+        <div class="icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <h1>Register for E-Voting</h1>
+
+      </div>
+
+      <p>
+        Create your account to participate in democratic elections
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="card-head">
+
+        <h3>Voter Registration Form</h3>
+
+        <p>
+          Fill in your details to register as a voter
+        </p>
+
+      </div>
+
+      <div class="form">
+
+        <label>Register as *</label>
+
+        <div class="role-box two-role-box">
+
+          <a href="RegisVoter.html" class="role-tab active">
+            <i class="fa-solid fa-user-group"></i>
+            Voter
+          </a>
+
+          <a href="RegisCandidate.html" class="role-tab">
+            <i class="fa-solid fa-square-check"></i>
+            Candidate
+          </a>
+
+        </div>
+
+        <div class="section">
+
+          <h3>Personal Information</h3>
+
+          <div class="field">
+            <label>Full Name *</label>
+            <input id="fullName" type="text" placeholder="Enter your full name" />
+          </div>
+
+          <div class="field">
+            <label>National ID Number *</label>
+            <input id="nid" type="text" placeholder="1234567890123" />
+          </div>
+
+          <div class="field">
+
+            <label>Scan / Upload NID *</label>
+
+            <div class="scan-box">
+
+              <input type="file" accept="image/*,.pdf" capture="environment" />
+
+              <div class="scan-icon">
+                <i class="fa-solid fa-id-card"></i>
+              </div>
+
+              <div class="scan-title">
+                Scan Your NID Card
+              </div>
+
+              <div class="scan-text">
+                Upload a clear image or scan of your National ID card for verification.
+              </div>
+
+              <div class="scan-btn">
+                <i class="fa-solid fa-camera"></i>
+                Choose File / Scan
+              </div>
+
+              <div class="scan-note">
+                Supported: JPG, PNG, PDF
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="field">
+              <label>Date of Birth *</label>
+              <input id="dob" type="date" />
+            </div>
+
+            <div class="field">
+
+              <label>Gender *</label>
+
+              <select id="gender">
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="section">
+
+          <h3>Contact Information</h3>
+
+          <div class="field">
+            <label>Email Address *</label>
+            <input id="email" type="email" placeholder="voter@example.com" />
+          </div>
+
+          <div class="field">
+            <label>Phone Number *</label>
+            <input id="phone" type="text" placeholder="+880 1XXXXXXXXX" />
+          </div>
+
+        </div>
+
+        <div class="section">
+
+          <h3>Security</h3>
+
+          <div class="field">
+            <label>Password *</label>
+            <input id="password" type="password" placeholder="Minimum 8 characters" />
+          </div>
+
+          <div class="field">
+            <label>Confirm Password *</label>
+            <input id="confirmPassword" type="password" placeholder="Re-enter your password" />
+          </div>
+
+        </div>
+
+        <label>Verification Method *</label>
+
+        <div class="verify">
+
+          <button type="button" class="active">
+            <i class="fa-solid fa-envelope"></i>
+            Verify by Email
+          </button>
+
+          <button type="button">
+            <i class="fa-solid fa-phone"></i>
+            Verify by SMS
+          </button>
+
+        </div>
+
+        <a href="loginvoter.html" class="submit">
+          Register Voter
+        </a>
+
+        <hr />
+
+        <div class="login">
+          Already have an account?
+          <a href="loginvoter.html">Login here</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script src="js/register.js?v=1000"></script>
+</body>
+</html>

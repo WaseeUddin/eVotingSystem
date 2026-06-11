@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Private Election</title>
+  <link rel="stylesheet" href="Allfile_Voter.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="VoterDashboard.html" class="dashboard-link">Dashboard</a>
+    <a href="Election.html" class="election-link">Elections</a>
+    <a href="Donate_to_Candi.html" class="donation-link">Donations</a>
+  </nav>
+
+  <div class="actions">
+    <button class="user-btn">
+      <i class="fa-solid fa-heart"></i>
+      John Doe <span class="role">(Voter)</span>
+    </button>
+
+    <a href="index.html" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main class="page">
+  <a href="VoterDashboard.html" class="back">
+    <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+  </a>
+
+  <section class="form-card">
+    <div class="section-title">
+      <h3><i class="fa-regular fa-calendar-plus"></i> Create Private Election</h3>
+      <p>Create a custom election for a committee or private group. You can select specific candidates and eligible voters.</p>
+    </div>
+
+    <form id="privateElectionForm">
+      <label>Election Title *</label>
+      <input id="electionTitle" type="text" placeholder="e.g., Student Council Election 2026">
+
+      <label>Description *</label>
+      <textarea id="electionDescription" placeholder="Describe the purpose and scope of this election"></textarea>
+
+      <div class="row">
+        <div>
+          <label>Start Date *</label>
+          <input id="startDate" type="date">
+        </div>
+
+        <div>
+          <label>End Date *</label>
+          <input id="endDate" type="date">
+        </div>
+      </div>
+
+      <div class="head-line">
+        <h3><i class="fa-solid fa-users"></i> Candidates *</h3>
+        <button type="button"><i class="fa-solid fa-plus"></i> Add New Candidate</button>
+      </div>
+
+      <div class="add-box">
+        <h4>Add New Candidate</h4>
+
+        <label>Candidate Name *</label>
+        <input id="newCandidateName" type="text" placeholder="e.g., John Smith">
+
+        <label>Party *</label>
+        <input id="newCandidateParty" type="text" placeholder="e.g., Independent">
+
+        <label>Campaign Statement (Optional)</label>
+        <textarea id="newCandidateStatement" placeholder="Brief campaign statement..."></textarea>
+
+        <div class="small-actions">
+          <button type="button" class="purple-btn"><i class="fa-solid fa-plus"></i> Add Candidate</button>
+          <button type="button" class="light-btn">Cancel</button>
+        </div>
+      </div>
+
+      <p class="muted">Or select from existing candidates</p>
+
+      <div class="list">
+        <label class="item">
+          <input type="checkbox" class="existing-candidate" value="1">
+          <span><b>Sarah Johnson</b><small>Progressive Party</small></span>
+        </label>
+
+        <label class="item">
+          <input type="checkbox" class="existing-candidate" value="2">
+          <span><b>Michael Chen</b><small>Liberty Alliance</small></span>
+        </label>
+
+        <label class="item">
+          <input type="checkbox" class="existing-candidate" value="3">
+          <span><b>Emily Rodriguez</b><small>Unity Coalition</small></span>
+        </label>
+      </div>
+
+      <hr>
+
+      <div class="head-line only-title">
+        <h3><i class="fa-solid fa-user-check"></i> Eligible Voters *</h3>
+      </div>
+
+      <p class="muted">Select voters by NID number and optionally filter by area</p>
+
+      <label class="area-box">
+        <input type="checkbox" id="areaRestriction">
+        <span><i class="fa-solid fa-location-dot"></i> Enable Area-Based Restriction (Optional)</span>
+      </label>
+
+      <label>Enter Voter NIDs Manually (Optional)</label>
+      <textarea id="manualNids" placeholder="1234567890123, 2345678901234, 3456789012345..."></textarea>
+
+      <p class="muted">Enter NID numbers separated by commas. These will be added to the selected voters below.</p>
+
+      <div class="voter-head">
+        <p>Or Select from Existing Voters</p>
+        <div>
+          <button type="button" id="selectAllVoters">Select All</button>
+          <button type="button" id="deselectAllVoters">Deselect All</button>
+        </div>
+      </div>
+
+      <div class="list voters">
+        <label class="item">
+          <input type="checkbox" class="existing-voter" value="1234567890123">
+          <span><b>Ahmed Rahman <em>Dhaka</em></b><small>NID: 1234567890123</small></span>
+        </label>
+
+        <label class="item">
+          <input type="checkbox" class="existing-voter" value="2345678901234">
+          <span><b>Fatima Khan <em>Dhaka</em></b><small>NID: 2345678901234</small></span>
+        </label>
+
+        <label class="item">
+          <input type="checkbox" class="existing-voter" value="3456789012345">
+          <span><b>Kamal Hossain <em>Chittagong</em></b><small>NID: 3456789012345</small></span>
+        </label>
+
+        <label class="item">
+          <input type="checkbox" class="existing-voter" value="4567890123456">
+          <span><b>Nadia Islam <em>Chittagong</em></b><small>NID: 4567890123456</small></span>
+        </label>
+
+        <label class="item">
+          <input type="checkbox" class="existing-voter" value="5678901234567">
+          <span><b>Rashed Ahmed <em>Sylhet</em></b><small>NID: 5678901234567</small></span>
+        </label>
+      </div>
+
+      <div class="bottom-actions">
+        <button type="button" class="light-btn">Cancel</button>
+        <button type="submit" class="purple-btn">Create Election</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script src="js/privateElection.js?v=2"></script>
+</body>
+</html>

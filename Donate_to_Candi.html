@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate to Candidates</title>
+
+  <link rel="stylesheet" href="Allfile_Voter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="VoterDashboard.html" class="dashboard-link">Dashboard</a>
+    <a href="Election.html" class="election-link">Elections</a>
+    <a href="Donate_to_Candi.html" class="donation-link active">Donations</a>
+  </nav>
+
+  <div class="actions">
+    <button class="user-btn">
+      <i class="fa-solid fa-heart"></i>
+      <span class="voter-name-text">Voter</span>
+      <span class="role">(Voter)</span>
+    </button>
+
+    <a href="backend/logout.php" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+  <h1>Donate to Candidates</h1>
+
+  <p class="subtitle">
+    Support candidates you believe in with financial contributions.
+  </p>
+
+  <section class="grid" id="candidateGrid">
+    <p>Loading candidates...</p>
+  </section>
+</main>
+
+<script src="js/donation.js?v=700"></script>
+<script src="js/voterHeader.js?v=1000"></script>
+</body>
+</html>

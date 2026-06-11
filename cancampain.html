@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Campaign & Donations</title>
+<link rel="stylesheet" href="candidate_all.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <div class="logo">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span>E-Voting System</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="canhome.html" class="home-link">Dashboard</a>
+    <a href="canprofile.html" class="profile-link">Profile</a>
+    <a href="cancampain.html" class="campaign-link active">Campaign</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="user-btn">
+      <i class="fa-solid fa-user"></i>
+      <span id="headerCandidateName">Candidate</span>
+      <span class="role">(Candidate)</span>
+    </button>
+
+    <a href="backend/logout.php" class="logout-btn">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Logout
+    </a>
+  </div>
+</header>
+
+<main>
+  <h1>Campaign & Donations</h1>
+  <p class="subtitle">Track your fundraising progress and donor activity.</p>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span class="stat-icon green"><i class="fa-solid fa-dollar-sign"></i></span>
+      <p class="stat-title">Total Raised</p>
+      <p class="stat-number" id="totalRaised">$0</p>
+      <p class="stat-text">of $100,000 goal</p>
+
+      <div class="small-bar">
+        <div class="small-fill" id="smallProgressFill"></div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon blue"><i class="fa-solid fa-user-friends"></i></span>
+      <p class="stat-title">Total Donors</p>
+      <p class="stat-number" id="totalDonors">0</p>
+      <p class="stat-text">Individual supporters</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon purple"><i class="fa-solid fa-arrow-up-right"></i></span>
+      <p class="stat-title">Avg. Donation</p>
+      <p class="stat-number" id="avgDonation">$0.00</p>
+      <p class="stat-text">Per donor contribution</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="panel">
+      <h2>Fundraising Progress</h2>
+      <p class="panel-sub">Your campaign funding goal</p>
+
+      <div class="progress-box">
+        <div class="progress-top">
+          <span>Current Progress</span>
+          <span id="progressPercent">0.0%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="campaignProgressFill"></div>
+        </div>
+
+        <div class="progress-bottom">
+          <span id="progressAmount">$0</span>
+          <span id="goalAmount">$100,000</span>
+        </div>
+      </div>
+
+      <div class="mini-stats">
+        <div class="mini-card green-bg">
+          <p class="mini-label">This Month</p>
+          <p class="mini-value green" id="thisMonthAmount">$0</p>
+        </div>
+
+        <div class="mini-card blue-bg">
+          <p class="mini-label">Remaining</p>
+          <p class="mini-value blue" id="remainingAmount">$100,000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Recent Donations</h2>
+      <p class="panel-sub">Latest contributions from supporters</p>
+
+      <div id="recentDonations">
+        <div class="empty">
+          <div class="empty-icon"><i class="fa-solid fa-hand-holding-usd"></i></div>
+          <p class="empty-text">Loading donations...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/candidateCampaign.js?v=100"></script>
+</body>
+</html>
