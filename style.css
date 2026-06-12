@@ -518,3 +518,17 @@ footer {
   margin-top:0;
   padding-top:20px;
 }
+.empty-home-card {
+  text-align: center;
+  grid-column: 1 / -1;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.empty-home-card h3 {
+  margin-top: 10px;
+}
+
+.empty-home-card p {
+  color: var(--text);
+}

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>E-Voting System</title>
 
+  <!-- Updated CSS -->
   <link rel="stylesheet" href="style.css" />
+
   <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,16 +27,16 @@
 
 <main>
 
-  <!-- Hero -->
   <section class="hero">
-    <div class="icon"><i class="fa-solid fa-square-check"></i></div>
+    <div class="icon">
+      <i class="fa-solid fa-square-check"></i>
+    </div>
 
     <h1>Vote for the Future</h1>
 
     <p>
       Secure, transparent, and accessible democratic participation.
-      Join thousands of citizens making their voices heard through our
-      modern e-voting platform.
+      Join citizens making their voices heard through our modern e-voting platform.
     </p>
 
     <div class="hero-actions">
@@ -49,17 +51,16 @@
     </div>
   </section>
 
-  <!-- Stats -->
   <div class="stats">
     <div class="stat-card">
       <span><i class="fa-solid fa-users"></i></span>
-      <h3>50,000+</h3>
+      <h3 id="homeVoterCount">0</h3>
       <p>Active Voters</p>
     </div>
 
     <div class="stat-card">
       <span><i class="fa-regular fa-square-check"></i></span>
-      <h3>100+</h3>
+      <h3 id="homeElectionCount">0</h3>
       <p>Elections Held</p>
     </div>
 
@@ -70,116 +71,62 @@
     </div>
   </div>
 
-  <!-- Live Elections -->
+  <!-- LIVE ELECTIONS SECTION -->
   <section>
     <div class="live-banner">
       <h2><i class="fa-solid fa-wave-square"></i> Live Elections</h2>
-      <p>3 elections are currently active. Register now to participate!</p>
+      <p id="liveElectionText">Loading active elections...</p>
     </div>
 
-    <div class="elections">
-
+    <div class="elections" id="homeElectionList">
       <div class="election-card">
-        <span class="badge">Active</span>
-        <h3>Presidential Election 2024</h3>
-        <p><i class="fa-solid fa-location-dot"></i> National</p>
-        <p><i class="fa-regular fa-calendar"></i> Mar 15 - Mar 30, 2024</p>
-
-        <div class="numbers">
-          <div>5<br><small>Candidates</small></div>
-          <div>35,420<br><small>Votes Cast</small></div>
-        </div>
-
-        <div class="progress"><div style="width:50%"></div></div>
-
-        <a href="RegisVoter.html" class="vote-btn">
-          <i class="fa-solid fa-square-check"></i>
-          Participate Now
-        </a>
+        <p>Loading elections...</p>
       </div>
-
-      <div class="election-card">
-        <span class="badge">Active</span>
-        <h3>City Mayor Election</h3>
-        <p><i class="fa-solid fa-location-dot"></i> Dhaka</p>
-        <p><i class="fa-regular fa-calendar"></i> Mar 12 - Mar 27, 2024</p>
-
-        <div class="numbers">
-          <div>8<br><small>Candidates</small></div>
-          <div>12,890<br><small>Votes Cast</small></div>
-        </div>
-
-        <div class="progress"><div style="width:80%"></div></div>
-
-        <a href="RegisVoter.html" class="vote-btn">
-          <i class="fa-solid fa-square-check"></i>
-          Participate Now
-        </a>
-      </div>
-
-      <div class="election-card">
-        <span class="badge">Active</span>
-        <h3>State Governor Election</h3>
-        <p><i class="fa-solid fa-location-dot"></i> Chattogram</p>
-        <p><i class="fa-regular fa-calendar"></i> Mar 14 - Mar 29, 2024</p>
-
-        <div class="numbers">
-          <div>6<br><small>Candidates</small></div>
-          <div>24,567<br><small>Votes Cast</small></div>
-        </div>
-
-        <div class="progress"><div style="width:60%"></div></div>
-
-        <a href="RegisVoter.html" class="vote-btn">
-          <i class="fa-solid fa-square-check"></i>
-          Participate Now
-        </a>
-      </div>
-
     </div>
 
-    <a href="loginvoter.html" class="view-all">
-      View All Elections
-    </a>
+    <!-- Updated View All Elections -->
+    <a href="all_elections.html" class="view-all">View All Elections</a>
   </section>
 
-  <!-- Features -->
   <section class="features-section">
     <div class="title">
       <h2>Why Choose Our Platform?</h2>
-      <p>Built with cutting-edge technology to ensure your vote matters</p>
+      <p>Built with technology to ensure your vote matters</p>
     </div>
 
     <div class="features">
-
       <div class="card">
-        <div class="mini-icon"><i class="fa-solid fa-lock"></i></div>
+        <div class="mini-icon">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+
         <h3>Secure & Private</h3>
-        <p>Your vote remains anonymous and your data stays protected.</p>
+        <p>Your vote remains protected and your data stays safe.</p>
       </div>
 
       <div class="card">
-        <div class="mini-icon"><i class="fa-regular fa-eye"></i></div>
+        <div class="mini-icon">
+          <i class="fa-regular fa-eye"></i>
+        </div>
+
         <h3>Transparent</h3>
-        <p>Real-time results and live monitoring ensure complete transparency.</p>
+        <p>Real-time results and live monitoring ensure transparency.</p>
       </div>
 
       <div class="card">
-        <div class="mini-icon"><i class="fa-solid fa-bolt"></i></div>
-        <h3>Vote Anytime</h3>
-        <p>Cast your vote from anywhere during the election window.</p>
-      </div>
+        <div class="mini-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
 
+        <h3>Vote Anytime</h3>
+        <p>Cast your vote during the active election window.</p>
+      </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta">
     <h2>Ready to Make Your Voice Heard?</h2>
-    <p>
-      Join our platform today and participate in secure, transparent democratic elections
-    </p>
-
+    <p>Join our platform today and participate in secure, transparent democratic elections.</p>
     <a href="RegisVoter.html" class="register-btn">
       <i class="fa-solid fa-square-check"></i>
       Register Now
@@ -189,9 +136,17 @@
 </main>
 
 <footer>
-  <div><i class="fa-solid fa-square-check"></i> E-Voting System</div>
-  <div>© 2026 E-Voting System. All rights reserved.</div>
+  <div>
+    <i class="fa-solid fa-square-check"></i>
+    E-Voting System
+  </div>
+
+  <div>
+    © 2026 E-Voting System. All rights reserved.
+  </div>
 </footer>
 
+<!-- JS -->
+<script src="js/home.js?v=1"></script>
 </body>
 </html>

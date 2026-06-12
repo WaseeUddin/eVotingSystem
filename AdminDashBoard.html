@@ -28,10 +28,11 @@
   <div class="actions">
     <button class="top-btn">
       <i class="fa-solid fa-shield-halved"></i>
-      Admin User <span class="role">(Admin)</span>
+      <span class="admin-name-text">Admin User</span>
+      <span class="role">(Admin)</span>
     </button>
 
-    <a href="index.html" class="top-btn logout-btn">
+    <a href="backend/logout.php" class="top-btn logout-btn">
       <i class="fa-solid fa-arrow-right-from-bracket"></i>
       Logout
     </a>
@@ -42,79 +43,85 @@
   <h1>Admin Dashboard</h1>
   <p class="subtitle">Manage elections, monitor voting, and ensure system integrity.</p>
 
-  <!-- STATS -->
   <div class="stats">
     <div class="card">
-      <div class="icon blue"><i class="fa-solid fa-calendar-days"></i></div>
+      <div class="icon blue">
+        <i class="fa-solid fa-calendar-days"></i>
+      </div>
       <p class="stat-title">Total Elections</p>
-      <p class="stat-number">2</p>
-      <p class="stat-text">1 currently active</p>
+      <p class="stat-number" id="totalElections">0</p>
+      <p class="stat-text" id="activeElectionText">0 currently active</p>
     </div>
 
     <div class="card">
-      <div class="icon green"><i class="fa-solid fa-arrow-up-right"></i></div>
+      <div class="icon green">
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </div>
       <p class="stat-title">Total Votes</p>
-      <p class="stat-number">0</p>
+      <p class="stat-number" id="totalVotes">0</p>
       <p class="stat-text">Across all elections</p>
     </div>
 
     <div class="card">
-      <div class="icon purple"><i class="fa-solid fa-users"></i></div>
+      <div class="icon purple">
+        <i class="fa-solid fa-users"></i>
+      </div>
       <p class="stat-title">Candidates</p>
-      <p class="stat-number">3</p>
-      <p class="stat-text">Registered candidates</p>
+      <p class="stat-number" id="candidateCount">0</p>
+      <p class="stat-text" id="candidateText">Registered candidates</p>
     </div>
 
     <div class="card">
-      <div class="icon red"><i class="fa-solid fa-exclamation-triangle"></i></div>
+      <div class="icon red">
+        <i class="fa-solid fa-exclamation-triangle"></i>
+      </div>
       <p class="stat-title">Anomalies</p>
-      <p class="stat-number">0</p>
-      <p class="stat-text">Unresolved issues</p>
+      <p class="stat-number" id="anomalyCount">0</p>
+      <p class="stat-text" id="unresolvedAnomalyText">0 unresolved issues</p>
     </div>
   </div>
 
-  <!-- PANELS -->
   <div class="content">
 
-    <!-- LEFT -->
     <div class="panel">
       <h2>Active Elections</h2>
       <p class="panel-sub">Elections currently accepting votes</p>
       <a href="ManageElections.html" class="btn">Manage All</a>
 
-      <div class="election">
-        <span class="live">Live</span>
-        <h3>2026 General Election</h3>
-        <p class="small">National general election for congressional representatives</p>
-
-        <div class="bottom">
-          <span>0 votes cast</span>
-          <span>4425h remaining</span>
+      <div id="activeElectionList">
+        <div class="empty">
+          <p>Loading active elections...</p>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT -->
-<div class="panel">
-  <div class="panel-header">
-    <div>
-      <h2>System Anomalies</h2>
-      <p class="panel-sub">Issues requiring attention</p>
-    </div>
-    <a href="Anomaly_Detection_andRepoting.html" class="btn-outline">View All</a>
-  </div>
+    <div class="panel">
+      <div class="panel-header">
+        <div>
+          <h2>System Anomalies</h2>
+          <p class="panel-sub">Issues requiring attention</p>
+        </div>
 
-  <div class="empty">
-    <div class="icon">
-      <i class="fa-solid fa-triangle-exclamation"></i>
+        <a href="Anomaly_Detection_andRepoting.html" class="btn-outline">
+          View All
+        </a>
+      </div>
+
+      <div id="adminAnomalyList">
+        <div class="empty">
+          <div class="icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <p>Loading anomalies...</p>
+          <small>Please wait</small>
+        </div>
+      </div>
     </div>
-    <p>No unresolved anomalies</p>
-    <small>System running smoothly</small>
-  </div>
-</div>
 
   </div>
 </main>
 
+<script src="js/adminHeader.js?v=100"></script>
+<script src="js/adminDashboard.js?v=100"></script>
 </body>
 </html>

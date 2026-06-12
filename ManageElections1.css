@@ -587,3 +587,71 @@ textarea{
     width:100%
   }
 }
+.form-card {
+  background: #fff;
+  border: 1px solid #b9dcff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0, 110, 255, 0.1);
+}
+
+.form-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.close-btn,
+.cancel-btn,
+.save-btn,
+.create-btn,
+.edit-btn,
+.delete-btn {
+  cursor: pointer;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.candidate-list {
+  border: 1px solid #b9dcff;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fcfbff;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.candidate-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e6efff;
+}
+
+.candidate-check:last-child {
+  border-bottom: none;
+}
+
+.candidate-check input {
+  width: auto;
+}
+
+.candidate-check small {
+  display: block;
+  color: #4b4f7c;
+  margin-top: 3px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}

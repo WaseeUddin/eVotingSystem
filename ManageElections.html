@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manage Elections</title>
-
-  <link rel="stylesheet" href="ManageElections.css">
-  <script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Elections</title>
+<link rel="stylesheet" href="ManageElections.css">
+<script src="https://kit.fontawesome.com/cbcb94e751.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,10 +28,11 @@
   <div class="actions">
     <button class="top-btn">
       <i class="fa-solid fa-shield-halved"></i>
-      Admin User <span class="role">(Admin)</span>
+      <span class="admin-name-text">Admin User</span>
+      <span class="role">(Admin)</span>
     </button>
 
-    <a href="index.html" class="top-btn logout-btn">
+    <a href="backend/logout.php" class="top-btn logout-btn">
       <i class="fa-solid fa-arrow-right-from-bracket"></i>
       Logout
     </a>
@@ -40,70 +40,79 @@
 </header>
 
 <main>
-
-  <div class="page-top">
+  <div class="top">
     <div>
       <h1>Manage Elections</h1>
-      <p class="subtitle">Create and control election time windows.</p>
+      <p class="subtitle">Create, edit and delete elections from database.</p>
     </div>
 
-    <a href="ManageElections1.html" class="create-btn">
+    <button type="button" class="create-btn" id="showCreateForm">
       <i class="fa-solid fa-plus"></i>
       Create Election
-    </a>
+    </button>
   </div>
 
-  <div class="card">
-    <div class="card-title">
-      2026 General Election
-      <span class="badge active">Active</span>
+  <section class="form-card" id="electionFormPanel" style="display:none;">
+    <div class="form-head">
+      <h2 id="formHeading">Create Election</h2>
+      <button type="button" class="close-btn" id="closeElectionForm">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
 
-    <p class="desc">
-      National general election for congressional representatives
-    </p>
+    <form id="adminElectionForm">
+      <input type="hidden" id="electionId">
 
-    <div class="info">
-      <span><i class="fa-regular fa-calendar"></i> Start: 11/1/2026, 8:00:00 AM</span>
-      <span><i class="fa-regular fa-clock"></i> End: 11/1/2026, 8:00:00 PM</span>
-    </div>
+      <label>Election Title *</label>
+      <input type="text" id="electionTitle" placeholder="Enter election title">
 
-    <div class="bottom">
-      <span>3 candidates registered</span>
+      <label>Description *</label>
+      <textarea id="electionDescription" placeholder="Enter election description"></textarea>
 
-      <div class="card-actions">
-        <button><i class="fa-regular fa-pen-to-square"></i> Edit</button>
-        <button class="delete"><i class="fa-regular fa-trash-can"></i> Delete</button>
+      <div class="row">
+        <div>
+          <label>Start Date & Time *</label>
+          <input type="datetime-local" id="startDatetime">
+        </div>
+
+        <div>
+          <label>End Date & Time *</label>
+          <input type="datetime-local" id="endDatetime">
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-title">
-      2026 Primary Election
-      <span class="badge completed">Completed</span>
-    </div>
+      <label>Election Type *</label>
+      <select id="electionType">
+        <option value="public">Public Election</option>
+        <option value="private">Private Election</option>
+      </select>
 
-    <p class="desc">
-      Primary election for party nominations
-    </p>
-
-    <div class="info">
-      <span><i class="fa-regular fa-calendar"></i> Start: 6/15/2026, 8:00:00 AM</span>
-      <span><i class="fa-regular fa-clock"></i> End: 6/15/2026, 8:00:00 PM</span>
-    </div>
-
-    <div class="bottom">
-      <span>2 candidates registered</span>
-
-      <div class="card-actions">
-        <button><i class="fa-regular fa-pen-to-square"></i> Edit</button>
-        <button class="delete"><i class="fa-regular fa-trash-can"></i> Delete</button>
+      <label>Select Candidates</label>
+      <div class="candidate-list" id="candidateCheckboxList">
+        <p>Loading candidates...</p>
       </div>
-    </div>
-  </div>
 
+      <div class="form-actions">
+        <button type="button" class="cancel-btn" id="cancelElectionForm">
+          Cancel
+        </button>
+
+        <button type="submit" class="save-btn">
+          <i class="fa-solid fa-save"></i>
+          Save Election
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section id="electionList">
+    <div class="election-card">
+      <p>Loading elections...</p>
+    </div>
+  </section>
 </main>
 
+<script src="js/adminHeader.js?v=100"></script>
+<script src="js/manageElection.js?v=300"></script>
 </body>
 </html>

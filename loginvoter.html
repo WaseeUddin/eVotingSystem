@@ -35,22 +35,18 @@
 
   <!-- Tabs -->
   <div class="tabs">
-
     <a href="loginvoter.html" class="tab active">
       <i class="fa-solid fa-users"></i>
       Voter
     </a>
-
     <a href="logincandidate.html" class="tab">
       <i class="fa-solid fa-square-check"></i>
       Candidate
     </a>
-
     <a href="loginadmin.html" class="tab">
       <i class="fa-solid fa-shield"></i>
       Admin
     </a>
-
   </div>
 
   <!-- Card -->
@@ -61,21 +57,22 @@
       <p>Sign in to cast your vote</p>
     </div>
 
-    <form class="form">
+    <!-- Updated Form -->
+    <form class="form" method="POST" action="backend/loginvoter.php">
 
       <!-- Email -->
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="voter@example.com" required>
+      <input id="email" name="email" type="email" placeholder="voter@example.com" required>
 
       <!-- Password -->
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="••••••••" required>
+      <input id="password" name="password" type="password" placeholder="••••••••" required>
 
       <!-- Login Button -->
-      <a href="VoterDashboard.html" class="login-btn">
+      <button type="submit" class="login-btn">
         <i class="fa-solid fa-right-to-bracket"></i>
         Login as Voter
-      </a>
+      </button>
 
       <!-- Divider -->
       <div class="divider">
@@ -88,6 +85,7 @@
   </div>
 
 </div>
+
 <script src="js/login.js?v=1000"></script>
 </body>
 </html>
