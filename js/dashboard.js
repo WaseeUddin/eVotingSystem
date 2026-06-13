@@ -91,7 +91,9 @@ function loadVoterDashboard() {
           <p>${escapeHtml(election.description || "No description added.")}</p>
 
           <div class="election-actions">
-            <a href="Election.html" class="vote-btn">Vote Now</a>
+            <a href="VoteNow.html?election_id=${election.id}" class="vote-btn">
+  Vote Now
+</a>
           </div>
         `;
 

@@ -1,82 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const container = document.getElementById("electionList");
 
     fetch("backend/get_public_live_elections.php?t=" + Date.now())
 
-    .then(res => res.json())
+    .then(response => response.json())
 
     .then(data => {
 
-        if (!data || data.length === 0) {
+        if (
+            data.status !== "success" ||
+            !data.elections ||
+            data.elections.length === 0
+        ) {
 
             container.innerHTML = `
                 <div class="election-card">
-                    <h3>No Live Public Elections</h3>
-                    <p>No public election is currently active.</p>
+                    <h3>No Public Elections Found</h3>
                 </div>
             `;
+
             return;
         }
 
-        container.innerHTML = data.map(election => {
+        let html = "";
 
-            const candidatesHtml = election.candidates
+        data.elections.forEach(election => {
 
-            .sort((a,b)=> Number(b.votes) - Number(a.votes))
-
-            .map((c,index)=>{
-
-                let medal = "";
-
-                if(index === 0){
-                    medal = "gold";
-                }
-                else if(index === 1){
-                    medal = "silver";
-                }
-                else if(index === 2){
-                    medal = "bronze";
-                }
-
-                return `
-                    <div class="candidate-row ${medal}">
-
-                        <div class="rank">
-                            #${index + 1}
-                        </div>
-
-                        <div class="candidate-details">
-
-                            <div class="candidate-name">
-                                ${c.name}
-                            </div>
-
-                            <div class="party">
-                                ${c.party}
-                            </div>
-
-                        </div>
-
-                        <div class="stats">
-
-                            <div class="vote-count">
-                                ${c.votes} Votes
-                            </div>
-
-                            <div class="donation">
-                                Donations: $${Number(c.total_raised).toLocaleString()}
-                            </div>
-
-                        </div>
-
-                    </div>
-                `;
-            })
-
-            .join("");
-
-            return `
+            html += `
 
                 <div class="election-card">
 
@@ -84,31 +35,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <p>${election.description}</p>
 
-                    <div class="election-info">
+                    <div class="stats">
 
-                        <div class="info-box">
-                            Total Candidates
-                            <strong>${election.candidate_count}</strong>
+                        <div class="stat-box">
+                            <span>Status</span>
+                            <strong>${election.status}</strong>
                         </div>
 
-                        <div class="info-box">
-                            Total Votes
-                            <strong>${election.vote_count}</strong>
+                        <div class="stat-box">
+                            <span>Type</span>
+                            <strong>${election.election_type}</strong>
                         </div>
 
                     </div>
 
-                    <h3 class="ranking-title">
-                        Live Candidate Ranking
-                    </h3>
+                    <p>
+                        <strong>Start:</strong>
+                        ${election.start_datetime}
+                    </p>
 
-                    ${candidatesHtml}
+                    <p>
+                        <strong>End:</strong>
+                        ${election.end_datetime}
+                    </p>
+
+                    <a
+                        href="election_details.html?id=${election.id}"
+                        class="view-btn"
+                    >
+                        View Live Results
+                    </a>
 
                 </div>
 
             `;
+        });
 
-        }).join("");
+        container.innerHTML = html;
 
     })
 
@@ -118,10 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.innerHTML = `
             <div class="election-card">
-                <h3>Error Loading Elections</h3>
-                <p>Please try again later.</p>
+                <h3>Failed To Load Elections</h3>
             </div>
         `;
+
     });
 
 });

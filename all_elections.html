@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Live Public Elections</title>
+<title>All Public Elections</title>
 
-    <link rel="stylesheet" href="all_elections.css">
+<link rel="stylesheet" href="all_elections.css?v=5">
+<script src="js/all_elections.js?v=5" defer></script>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <script src="js/all_elections.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        <i class="fa-solid fa-vote-yea"></i>
-        E-Voting System
-    </div>
-</header>
+<div class="container">
 
-<main>
+    <h1>🗳️ All Public Elections</h1>
 
-    <section class="section">
+    <p class="subtitle">
+        View all active public elections and live results.
+    </p>
 
-        <h1>🗳️ Live Public Elections</h1>
+    <div id="electionList">
 
-        <p>
-            Track ongoing public elections, candidate rankings,
-            vote counts and campaign performance in real time.
-        </p>
+        <div class="election-card">
 
-        <div id="electionList">
-
-            <div class="election-card">
-
-                <h3>Loading Elections...</h3>
-
-                <p>
-                    Please wait while we fetch the latest election data.
-                </p>
-
-            </div>
+            <h3>Loading Elections...</h3>
 
         </div>
 
-        <a href="index.html" class="view-all">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Home
-        </a>
+    </div>
 
-    </section>
+    <a href="index.html" class="back-btn">
+        ← Back To Home
+    </a>
 
-</main>
+</div>
 
 </body>
 </html>

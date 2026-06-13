@@ -4,6 +4,9 @@ session_start();
 
 header('Content-Type: application/json');
 
+/**
+ * Only allow POST request
+ */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode([
         "status" => "error",
@@ -12,6 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+/**
+ * Collect input
+ */
 $full_name = trim($_POST['full_name'] ?? '');
 $nid = trim($_POST['nid'] ?? '');
 $dob = trim($_POST['dob'] ?? '');
@@ -20,11 +26,20 @@ $email = trim($_POST['email'] ?? '');
 $phone = trim($_POST['phone'] ?? '');
 $passwordText = trim($_POST['password'] ?? '');
 $role = trim($_POST['role'] ?? 'voter');
-
 $party = trim($_POST['party'] ?? '');
 $campaign_statement = trim($_POST['campaign_statement'] ?? '');
 
-if ($full_name === '' || $nid === '' || $dob === '' || $email === '' || $phone === '' || $passwordText === '') {
+/**
+ * Validate required fields
+ */
+if (
+    $full_name === '' ||
+    $nid === '' ||
+    $dob === '' ||
+    $email === '' ||
+    $phone === '' ||
+    $passwordText === ''
+) {
     echo json_encode([
         "status" => "error",
         "message" => "Please fill all required fields"
@@ -32,6 +47,9 @@ if ($full_name === '' || $nid === '' || $dob === '' || $email === '' || $phone =
     exit;
 }
 
+/**
+ * Validate role
+ */
 if (!in_array($role, ['voter', 'candidate', 'admin'])) {
     echo json_encode([
         "status" => "error",
@@ -40,10 +58,16 @@ if (!in_array($role, ['voter', 'candidate', 'admin'])) {
     exit;
 }
 
-if ($gender === '' || !in_array($gender, ['Male', 'Female', 'Other'])) {
+/**
+ * Validate gender
+ */
+if (!in_array($gender, ['Male', 'Female', 'Other'])) {
     $gender = 'Other';
 }
 
+/**
+ * Candidate extra validation
+ */
 if ($role === 'candidate' && $party === '') {
     echo json_encode([
         "status" => "error",
@@ -52,16 +76,57 @@ if ($role === 'candidate' && $party === '') {
     exit;
 }
 
+/**
+ * File upload (NID)
+ */
+$nidFilePath = '';
+
+if (isset($_FILES['nidFile']) && $_FILES['nidFile']['error'] === 0) {
+
+    $uploadDir = '../uploads/';
+
+    if (!file_exists($uploadDir)) {
+        mkdir($uploadDir, 0777, true);
+    }
+
+    $fileName = time() . '_' . basename($_FILES['nidFile']['name']);
+    $targetFile = $uploadDir . $fileName;
+
+    if (move_uploaded_file($_FILES['nidFile']['tmp_name'], $targetFile)) {
+        $nidFilePath = 'uploads/' . $fileName;
+    }
+}
+
+/**
+ * Hash password
+ */
 $password = password_hash($passwordText, PASSWORD_BCRYPT);
 
+/**
+ * Start transaction
+ */
 $conn->begin_transaction();
 
 try {
-    $stmt = $conn->prepare(
-        "INSERT INTO users 
-        (full_name, nid, dob, gender, email, phone, password, role, verified) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1)"
-    );
+
+    /**
+     * Insert user
+     */
+    $stmt = $conn->prepare("
+        INSERT INTO users
+        (
+            full_name,
+            nid,
+            dob,
+            gender,
+            email,
+            phone,
+            password,
+            role,
+            verified
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1)
+    ");
 
     $stmt->bind_param(
         "ssssssss",
@@ -79,12 +144,22 @@ try {
     $userId = $stmt->insert_id;
     $stmt->close();
 
+    /**
+     * If candidate → insert candidate table
+     */
     if ($role === 'candidate') {
-        $candidateStmt = $conn->prepare(
-            "INSERT INTO candidates 
-            (user_id, name, party, campaign_statement, total_raised) 
-            VALUES (?, ?, ?, ?, 0)"
-        );
+
+        $candidateStmt = $conn->prepare("
+            INSERT INTO candidates
+            (
+                user_id,
+                name,
+                party,
+                campaign_statement,
+                total_raised
+            )
+            VALUES (?, ?, ?, ?, 0)
+        ");
 
         $candidateStmt->bind_param(
             "isss",
@@ -98,34 +173,47 @@ try {
         $candidateId = $candidateStmt->insert_id;
         $candidateStmt->close();
 
-        $defaultAgendaStmt = $conn->prepare(
-            "INSERT INTO candidate_agendas 
-            (candidate_id, title, description) 
-            VALUES (?, ?, ?)"
-        );
+        /**
+         * Default agenda
+         */
+        $agendaStmt = $conn->prepare("
+            INSERT INTO candidate_agendas
+            (
+                candidate_id,
+                title,
+                description
+            )
+            VALUES (?, ?, ?)
+        ");
 
         $agendaTitle = "My Main Agenda";
         $agendaDescription = "I will work for the people and community.";
 
-        $defaultAgendaStmt->bind_param(
+        $agendaStmt->bind_param(
             "iss",
             $candidateId,
             $agendaTitle,
             $agendaDescription
         );
 
-        $defaultAgendaStmt->execute();
-        $defaultAgendaStmt->close();
+        $agendaStmt->execute();
+        $agendaStmt->close();
     }
 
     $conn->commit();
 
+    /**
+     * Success response
+     */
     echo json_encode([
         "status" => "success",
         "message" => "Registration successful",
-        "role" => $role
+        "role" => $role,
+        "nid_file" => $nidFilePath
     ]);
+
 } catch (Exception $e) {
+
     $conn->rollback();
 
     echo json_encode([

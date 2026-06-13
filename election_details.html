@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Election Details</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:30px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+h1{
+    margin:0 0 10px;
+}
+
+.vote{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.donation{
+    color:#0d6efd;
+    font-size:20px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="electionInfo"></div>
+
+<div class="grid" id="candidateList"></div>
+
+</div>
+
+<script src="js/election_details.js"></script>
+
+</body>
+</html>

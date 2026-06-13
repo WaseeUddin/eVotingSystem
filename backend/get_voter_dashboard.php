@@ -80,7 +80,8 @@ $electionStmt = $conn->prepare(
             OR ev.voter_id = ?
             OR ev.nid = ?
         )
-        AND NOW() BETWEEN e.start_datetime AND e.end_datetime
+        AND e.start_datetime <= NOW()
+        AND e.end_datetime >= NOW()
      ORDER BY e.end_datetime ASC"
 );
 
